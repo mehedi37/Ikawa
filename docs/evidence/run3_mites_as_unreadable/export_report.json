@@ -1,0 +1,44 @@
+{
+ "temperature": 0.6707263588905334,
+ "size": 224,
+ "fp32_mb": 8.89633,
+ "int8_mb": 2.419471,
+ "calibration_images": 100,
+ "recipes": {
+  "conv_only_percentile": {
+   "mb": 2.479701,
+   "val_drop_points": 1.333333333333342
+  },
+  "conv_only_minmax": {
+   "mb": 2.479684,
+   "val_drop_points": 3.3333333333333326
+  },
+  "all_ops_percentile": {
+   "mb": 2.419471,
+   "val_drop_points": 0.33333333333334103
+  }
+ },
+ "chosen_recipe": "all_ops_percentile",
+ "splits": {
+  "val": {
+   "n": 600,
+   "acc_fp32": 0.9616666666666667,
+   "acc_int8": 0.9616666666666667,
+   "top1_agreement": 1.0
+  },
+  "test": {
+   "n": 600,
+   "acc_fp32": 0.9866666666666667,
+   "acc_int8": 0.9866666666666667,
+   "top1_agreement": 0.995
+  },
+  "ext_rocole": {
+   "n": 454,
+   "acc_fp32": 0.8921568627450981,
+   "acc_int8": 0.8872549019607843,
+   "top1_agreement": 0.9823788546255506
+  }
+ },
+ "shipped": "leaf_int8.onnx",
+ "accuracy_drop_points": 0.0
+}

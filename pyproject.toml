@@ -1,0 +1,18 @@
+[project]
+name = "world-bank"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "kaggle>=2.2.4",
+    "numpy>=2.5.3",
+    "pandas>=3.0.6",
+    "pillow>=12.3.0",
+    "rasterio>=1.5.2",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]

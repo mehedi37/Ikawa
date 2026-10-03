@@ -1,0 +1,1267 @@
+{
+ "_note": "SYNTHETIC test cases written by hand from agronomic reasoning. Not field data. Expected results are expert opinion, not ground truth.",
+ "cases": [
+  {
+   "id": "V01",
+   "synthetic": true,
+   "name": "rust clear, wet, row-local",
+   "rationale": "Strong rust on bad rows plus many heavy-rain days: rain spreads rust and wets leaves.",
+   "input": {
+    "vision": {
+     "bagProbs": [
+      0.05,
+      0.85,
+      0.03,
+      0.02,
+      0.03,
+      0.02
+     ],
+     "contrast": 0.6,
+     "usable": true
+    },
+    "answers": {
+     "lastSeasonHeavy": 0,
+     "flowersDropped": 2,
+     "bugSeen": 0,
+     "berryHoles": 0,
+     "treeAgeOver20": 0,
+     "wholeFarm": 0
+    },
+    "plot": {
+     "lat": -2.48,
+     "lon": 29.1,
+     "rainDaysOver40mm90d": 5,
+     "rainAnomalyFloweringPct": 0,
+     "soilPh": 5.6,
+     "soilSource": "isdasoil",
+     "dataThrough": "2026-09-30"
+    }
+   },
+   "expect": {
+    "top": "leaf_rust",
+    "abstain": false
+   }
+  },
+  {
+   "id": "V02",
+   "synthetic": true,
+   "name": "rust moderate, little else",
+   "rationale": "Rust only 55% in the bag and no corroboration: money advice needs a human.",
+   "input": {
+    "vision": {
+     "bagProbs": [
+      0.2,
+      0.55,
+      0.1,
+      0.05,
+      0.05,
+      0.05
+     ],
+     "contrast": 0.3,
+     "usable": true
+    },
+    "answers": {
+     "lastSeasonHeavy": 2,
+     "flowersDropped": 2,
+     "bugSeen": 2,
+     "berryHoles": 2,
+     "treeAgeOver20": 2,
+     "wholeFarm": 2
+    },
+    "plot": {
+     "lat": -2.48,
+     "lon": 29.1,
+     "rainDaysOver40mm90d": 2,
+     "rainAnomalyFloweringPct": 0,
+     "soilPh": 5.6,
+     "soilSource": "isdasoil",
+     "dataThrough": "2026-09-30"
+    }
+   },
+   "expect": {
+    "abstain": true,
+    "reasons": [
+     "money_needs_high_conf"
+    ]
+   }
+  },
+  {
+   "id": "V03",
+   "synthetic": true,
+   "name": "rust leaf + whole farm + wet",
+   "rationale": "Rust leaves, farm-wide, very wet season, trees young: rust epidemic pattern.",
+   "input": {
+    "vision": {
+     "bagProbs": [
+      0.05,
+      0.85,
+      0.03,
+      0.02,
+      0.03,
+      0.02
+     ],
+     "contrast": 0.35,
+     "usable": true
+    },
+    "answers": {
+     "lastSeasonHeavy": 0,
+     "flowersDropped": 2,
+     "bugSeen": 0,
+     "berryHoles": 0,
+     "treeAgeOver20": 0,
+     "wholeFarm": 1
+    },
+    "plot": {
+     "lat": -2.48,
+     "lon": 29.1,
+     "rainDaysOver40mm90d": 7,
+     "rainAnomalyFloweringPct": 0,
+     "soilPh": 5.6,
+     "soilSource": "isdasoil",
+     "dataThrough": "2026-09-30"
+    }
+   },
+   "expect": {
+    "top": "leaf_rust",
+    "abstain": false
+   }
+  },
+  {
+   "id": "V04",
+   "synthetic": true,
+   "name": "cercospora leaves",
+   "rationale": "Cercospora-like spots, high contrast, normal weather: leaf disease leads but 42% is below 0.45, so abstain.",
+   "input": {
+    "vision": {
+     "bagProbs": [
+      0.05,
+      0.05,
+      0.8,
+      0.05,
+      0.03,
+      0.02
+     ],
+     "contrast": 0.5,
+     "usable": true
+    },
+    "answers": {
+     "lastSeasonHeavy": 0,
+     "flowersDropped": 2,
+     "bugSeen": 0,
+     "berryHoles": 0,
+     "treeAgeOver20": 0,
+     "wholeFarm": 0
+    },
+    "plot": {
+     "lat": -2.48,
+     "lon": 29.1,
+     "rainDaysOver40mm90d": 1,
+     "rainAnomalyFloweringPct": 0,
+     "soilPh": 5.6,
+     "soilSource": "isdasoil",
+     "dataThrough": "2026-09-30"
+    }
+   },
+   "expect": {
+    "abstain": true,
+    "reasons": [
+     "top_cause_low"
+    ]
+   }
+  },
+  {
+   "id": "V05",
+   "synthetic": true,
+   "name": "bug and holes, healthy leaves",
+   "rationale": "Antestia seen and berries holed on healthy-looking leaves: insect pest.",
+   "input": {
+    "vision": {
+     "bagProbs": [
+      0.88,
+      0.03,
+      0.03,
+      0.02,
+      0.02,
+      0.02
+     ],
+     "contrast": 0.4,
+     "usable": true
+    },
+    "answers": {
+     "lastSeasonHeavy": 0,
+     "flowersDropped": 0,
+     "bugSeen": 1,
+     "berryHoles": 1,
+     "treeAgeOver20": 0,
+     "wholeFarm": 0
+    },
+    "plot": {
+     "lat": -2.48,
+     "lon": 29.1,
+     "rainDaysOver40mm90d": 1,
+     "rainAnomalyFloweringPct": 0,
+     "soilPh": 5.6,
+     "soilSource": "isdasoil",
+     "dataThrough": "2026-09-30"
+    }
+   },
+   "expect": {
+    "top": "insect_pest",
+    "abstain": false
+   }
+  },
+  {
+   "id": "V06",
+   "synthetic": true,
+   "name": "holes only, healthy leaves",
+   "rationale": "Berry holes alone is weak: abstain rather than sell insecticide.",
+   "input": {
+    "vision": {
+     "bagProbs": [
+      0.88,
+      0.03,
+      0.03,
+      0.02,
+      0.02,
+      0.02
+     ],
+     "contrast": 0.3,
+     "usable": true
+    },
+    "answers": {
+     "lastSeasonHeavy": 2,
+     "flowersDropped": 2,
+     "bugSeen": 2,
+     "berryHoles": 1,
+     "treeAgeOver20": 2,
+     "wholeFarm": 2
+    },
+    "plot": {
+     "lat": -2.48,
+     "lon": 29.1,
+     "rainDaysOver40mm90d": 1,
+     "rainAnomalyFloweringPct": 0,
+     "soilPh": 5.6,
+     "soilSource": "isdasoil",
+     "dataThrough": "2026-09-30"
+    }
+   },
+   "expect": {
+    "abstain": true,
+    "reasons": [
+     "money_needs_high_conf"
+    ]
+   }
+  },
+  {
+   "id": "V07",
+   "synthetic": true,
+   "name": "miner leaves + bug",
+   "rationale": "Leaf miner damage and bug sighting both point to insects.",
+   "input": {
+    "vision": {
+     "bagProbs": [
+      0.07,
+      0.03,
+      0.03,
+      0.02,
+      0.83,
+      0.02
+     ],
+     "contrast": 0.5,
+     "usable": true
+    },
+    "answers": {
+     "lastSeasonHeavy": 0,
+     "flowersDropped": 0,
+     "bugSeen": 1,
+     "berryHoles": 1,
+     "treeAgeOver20": 0,
+     "wholeFarm": 0
+    },
+    "plot": {
+     "lat": -2.48,
+     "lon": 29.1,
+     "rainDaysOver40mm90d": 1,
+     "rainAnomalyFloweringPct": 0,
+     "soilPh": 5.6,
+     "soilSource": "isdasoil",
+     "dataThrough": "2026-09-30"
+    }
+   },
+   "expect": {
+    "top": "insect_pest",
+    "abstain": false
+   }
+  },
+  {
+   "id": "V08",
+   "synthetic": true,
+   "name": "dry flowering, flowers dropped",
+   "rationale": "Flowering rain 40% below normal and flowers dropped: drought at flowering.",
+   "input": {
+    "vision": {
+     "bagProbs": [
+      0.88,
+      0.03,
+      0.03,
+      0.02,
+      0.02,
+      0.02
+     ],
+     "contrast": 0.05,
+     "usable": true
+    },
+    "answers": {
+     "lastSeasonHeavy": 0,
+     "flowersDropped": 1,
+     "bugSeen": 0,
+     "berryHoles": 0,
+     "treeAgeOver20": 0,
+     "wholeFarm": 1
+    },
+    "plot": {
+     "lat": -2.48,
+     "lon": 29.1,
+     "rainDaysOver40mm90d": 1,
+     "rainAnomalyFloweringPct": -40,
+     "soilPh": 5.6,
+     "soilSource": "isdasoil",
+     "dataThrough": "2026-09-30"
+    }
+   },
+   "expect": {
+    "top": "drought_at_flowering",
+    "abstain": false
+   }
+  },
+  {
+   "id": "V09",
+   "synthetic": true,
+   "name": "dry flowering only (data)",
+   "rationale": "Dry anomaly but farmer unsure on all: not enough for confident answer.",
+   "input": {
+    "vision": {
+     "bagProbs": [
+      0.88,
+      0.03,
+      0.03,
+      0.02,
+      0.02,
+      0.02
+     ],
+     "contrast": 0.05,
+     "usable": true
+    },
+    "answers": {
+     "lastSeasonHeavy": 2,
+     "flowersDropped": 2,
+     "bugSeen": 2,
+     "berryHoles": 2,
+     "treeAgeOver20": 2,
+     "wholeFarm": 2
+    },
+    "plot": {
+     "lat": -2.48,
+     "lon": 29.1,
+     "rainDaysOver40mm90d": 1,
+     "rainAnomalyFloweringPct": -35,
+     "soilPh": 5.6,
+     "soilSource": "isdasoil",
+     "dataThrough": "2026-09-30"
+    }
+   },
+   "expect": {
+    "abstain": true,
+    "reasons": [
+     "top_cause_low"
+    ]
+   }
+  },
+  {
+   "id": "V10",
+   "synthetic": true,
+   "name": "heavy rain, healthy leaves",
+   "rationale": "Many >=40mm days, healthy leaves, one area (slope erosion): heavy rain damage.",
+   "input": {
+    "vision": {
+     "bagProbs": [
+      0.88,
+      0.03,
+      0.03,
+      0.02,
+      0.02,
+      0.02
+     ],
+     "contrast": 0.05,
+     "usable": true
+    },
+    "answers": {
+     "lastSeasonHeavy": 0,
+     "flowersDropped": 1,
+     "bugSeen": 0,
+     "berryHoles": 0,
+     "treeAgeOver20": 0,
+     "wholeFarm": 0
+    },
+    "plot": {
+     "lat": -2.48,
+     "lon": 29.1,
+     "rainDaysOver40mm90d": 8,
+     "rainAnomalyFloweringPct": 0,
+     "soilPh": 5.6,
+     "soilSource": "isdasoil",
+     "dataThrough": "2026-09-30"
+    }
+   },
+   "expect": {
+    "top": "heavy_rain_damage",
+    "abstain": false
+   }
+  },
+  {
+   "id": "V11",
+   "synthetic": true,
+   "name": "acid soil, one area",
+   "rationale": "pH 4.6, one area, healthy leaves: soil acidity leads (~65%) but lime costs money, so needs >=0.75 or a human.",
+   "input": {
+    "vision": {
+     "bagProbs": [
+      0.88,
+      0.03,
+      0.03,
+      0.02,
+      0.02,
+      0.02
+     ],
+     "contrast": 0.05,
+     "usable": true
+    },
+    "answers": {
+     "lastSeasonHeavy": 0,
+     "flowersDropped": 0,
+     "bugSeen": 0,
+     "berryHoles": 0,
+     "treeAgeOver20": 0,
+     "wholeFarm": 0
+    },
+    "plot": {
+     "lat": -2.48,
+     "lon": 29.1,
+     "rainDaysOver40mm90d": 1,
+     "rainAnomalyFloweringPct": 0,
+     "soilPh": 4.6,
+     "soilSource": "isdasoil",
+     "dataThrough": "2026-09-30"
+    }
+   },
+   "expect": {
+    "abstain": true,
+    "reasons": [
+     "money_needs_high_conf"
+    ]
+   }
+  },
+  {
+   "id": "V12",
+   "synthetic": true,
+   "name": "acid soil only",
+   "rationale": "pH 4.8 alone: lime advice costs money, need more evidence.",
+   "input": {
+    "vision": {
+     "bagProbs": [
+      0.88,
+      0.03,
+      0.03,
+      0.02,
+      0.02,
+      0.02
+     ],
+     "contrast": 0.05,
+     "usable": true
+    },
+    "answers": {
+     "lastSeasonHeavy": 2,
+     "flowersDropped": 2,
+     "bugSeen": 2,
+     "berryHoles": 2,
+     "treeAgeOver20": 2,
+     "wholeFarm": 2
+    },
+    "plot": {
+     "lat": -2.48,
+     "lon": 29.1,
+     "rainDaysOver40mm90d": 1,
+     "rainAnomalyFloweringPct": 0,
+     "soilPh": 4.8,
+     "soilSource": "isdasoil",
+     "dataThrough": "2026-09-30"
+    }
+   },
+   "expect": {
+    "abstain": true,
+    "reasons": [
+     "top_cause_low"
+    ]
+   }
+  },
+  {
+   "id": "V13",
+   "synthetic": true,
+   "name": "old trees, low contrast, whole farm",
+   "rationale": "Trees >20 y, whole farm, healthy leaves, no weather anomaly: stump and renew.",
+   "input": {
+    "vision": {
+     "bagProbs": [
+      0.88,
+      0.03,
+      0.03,
+      0.02,
+      0.02,
+      0.02
+     ],
+     "contrast": 0.05,
+     "usable": true
+    },
+    "answers": {
+     "lastSeasonHeavy": 0,
+     "flowersDropped": 0,
+     "bugSeen": 0,
+     "berryHoles": 0,
+     "treeAgeOver20": 1,
+     "wholeFarm": 1
+    },
+    "plot": {
+     "lat": -2.48,
+     "lon": 29.1,
+     "rainDaysOver40mm90d": 1,
+     "rainAnomalyFloweringPct": 0,
+     "soilPh": 5.7,
+     "soilSource": "isdasoil",
+     "dataThrough": "2026-09-30"
+    }
+   },
+   "expect": {
+    "top": "old_trees_need_stumping",
+    "abstain": false
+   }
+  },
+  {
+   "id": "V14",
+   "synthetic": true,
+   "name": "off-year after bumper",
+   "rationale": "Last season huge, healthy leaves, normal weather: normal off-year.",
+   "input": {
+    "vision": {
+     "bagProbs": [
+      0.88,
+      0.03,
+      0.03,
+      0.02,
+      0.02,
+      0.02
+     ],
+     "contrast": 0.05,
+     "usable": true
+    },
+    "answers": {
+     "lastSeasonHeavy": 1,
+     "flowersDropped": 2,
+     "bugSeen": 0,
+     "berryHoles": 0,
+     "treeAgeOver20": 0,
+     "wholeFarm": 1
+    },
+    "plot": {
+     "lat": -2.48,
+     "lon": 29.1,
+     "rainDaysOver40mm90d": 1,
+     "rainAnomalyFloweringPct": 0,
+     "soilPh": 5.7,
+     "soilSource": "isdasoil",
+     "dataThrough": "2026-09-30"
+    }
+   },
+   "expect": {
+    "top": "normal_off_year",
+    "abstain": false
+   }
+  },
+  {
+   "id": "V15",
+   "synthetic": true,
+   "name": "off-year, mild rust (partly normal)",
+   "rationale": "Heavy last season but some rust signal: off-year leads or ties; must not be confident rust.",
+   "input": {
+    "vision": {
+     "bagProbs": [
+      0.2,
+      0.55,
+      0.1,
+      0.05,
+      0.05,
+      0.05
+     ],
+     "contrast": 0.2,
+     "usable": true
+    },
+    "answers": {
+     "lastSeasonHeavy": 1,
+     "flowersDropped": 2,
+     "bugSeen": 2,
+     "berryHoles": 2,
+     "treeAgeOver20": 0,
+     "wholeFarm": 1
+    },
+    "plot": {
+     "lat": -2.48,
+     "lon": 29.1,
+     "rainDaysOver40mm90d": 2,
+     "rainAnomalyFloweringPct": 0,
+     "soilPh": 5.7,
+     "soilSource": "isdasoil",
+     "dataThrough": "2026-09-30"
+    }
+   },
+   "expect": {
+    "abstain": true,
+    "reasons": [
+     "vision_low_conf"
+    ]
+   }
+  },
+  {
+   "id": "V16",
+   "synthetic": true,
+   "name": "photo unusable",
+   "rationale": "Photo gate failed upstream: must abstain.",
+   "input": {
+    "vision": {
+     "bagProbs": [
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.1,
+      0.1
+     ],
+     "contrast": 0.3,
+     "usable": false
+    },
+    "answers": {
+     "lastSeasonHeavy": 1,
+     "flowersDropped": 2,
+     "bugSeen": 2,
+     "berryHoles": 2,
+     "treeAgeOver20": 2,
+     "wholeFarm": 2
+    },
+    "plot": {
+     "lat": -2.48,
+     "lon": 29.1,
+     "rainDaysOver40mm90d": 1,
+     "rainAnomalyFloweringPct": 0,
+     "soilPh": 5.6,
+     "soilSource": "isdasoil",
+     "dataThrough": "2026-09-30"
+    }
+   },
+   "expect": {
+    "abstain": true,
+    "reasons": [
+     "photo_unusable"
+    ]
+   }
+  },
+  {
+   "id": "V17",
+   "synthetic": true,
+   "name": "not coffee leaf",
+   "rationale": "Model says not a coffee leaf with 90%: low coffee evidence; treat as unusable photo.",
+   "input": {
+    "vision": {
+     "bagProbs": [
+      0.02,
+      0.02,
+      0.02,
+      0.02,
+      0.02,
+      0.9
+     ],
+     "contrast": 0.1,
+     "usable": false
+    },
+    "answers": {
+     "lastSeasonHeavy": 2,
+     "flowersDropped": 2,
+     "bugSeen": 2,
+     "berryHoles": 2,
+     "treeAgeOver20": 2,
+     "wholeFarm": 2
+    },
+    "plot": {
+     "lat": -2.48,
+     "lon": 29.1,
+     "rainDaysOver40mm90d": 1,
+     "rainAnomalyFloweringPct": 0,
+     "soilPh": 5.6,
+     "soilSource": "isdasoil",
+     "dataThrough": "2026-09-30"
+    }
+   },
+   "expect": {
+    "abstain": true,
+    "reasons": [
+     "photo_unusable"
+    ]
+   }
+  },
+  {
+   "id": "V18",
+   "synthetic": true,
+   "name": "vision confused",
+   "rationale": "Flat bag probs: vision top < 0.60.",
+   "input": {
+    "vision": {
+     "bagProbs": [
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.1,
+      0.1
+     ],
+     "contrast": 0.3,
+     "usable": true
+    },
+    "answers": {
+     "lastSeasonHeavy": 2,
+     "flowersDropped": 2,
+     "bugSeen": 2,
+     "berryHoles": 2,
+     "treeAgeOver20": 2,
+     "wholeFarm": 2
+    },
+    "plot": {
+     "lat": -2.48,
+     "lon": 29.1,
+     "rainDaysOver40mm90d": 1,
+     "rainAnomalyFloweringPct": 0,
+     "soilPh": 5.6,
+     "soilSource": "isdasoil",
+     "dataThrough": "2026-09-30"
+    }
+   },
+   "expect": {
+    "abstain": true,
+    "reasons": [
+     "vision_low_conf"
+    ]
+   }
+  },
+  {
+   "id": "V19",
+   "synthetic": true,
+   "name": "no plot data, all unsure",
+   "rationale": "Nothing known: must abstain.",
+   "input": {
+    "vision": {
+     "bagProbs": [
+      0.88,
+      0.03,
+      0.03,
+      0.02,
+      0.02,
+      0.02
+     ],
+     "contrast": 0.1,
+     "usable": true
+    },
+    "answers": {
+     "lastSeasonHeavy": 2,
+     "flowersDropped": 2,
+     "bugSeen": 2,
+     "berryHoles": 2,
+     "treeAgeOver20": 2,
+     "wholeFarm": 2
+    },
+    "plot": null
+   },
+   "expect": {
+    "abstain": true,
+    "reasons": [
+     "top_cause_low"
+    ]
+   }
+  },
+  {
+   "id": "V20",
+   "synthetic": true,
+   "name": "contradiction",
+   "rationale": "Whole farm affected but one row far better than another: answers contradict.",
+   "input": {
+    "vision": {
+     "bagProbs": [
+      0.05,
+      0.85,
+      0.03,
+      0.02,
+      0.03,
+      0.02
+     ],
+     "contrast": 0.7,
+     "usable": true
+    },
+    "answers": {
+     "lastSeasonHeavy": 2,
+     "flowersDropped": 2,
+     "bugSeen": 2,
+     "berryHoles": 2,
+     "treeAgeOver20": 2,
+     "wholeFarm": 1
+    },
+    "plot": {
+     "lat": -2.48,
+     "lon": 29.1,
+     "rainDaysOver40mm90d": 3,
+     "rainAnomalyFloweringPct": 0,
+     "soilPh": 5.6,
+     "soilSource": "isdasoil",
+     "dataThrough": "2026-09-30"
+    }
+   },
+   "expect": {
+    "abstain": true,
+    "reasons": [
+     "answers_contradict"
+    ]
+   }
+  },
+  {
+   "id": "V21",
+   "synthetic": true,
+   "name": "missing pH",
+   "rationale": "pH null gives no soil evidence; farmer says heavy last season + whole farm.",
+   "input": {
+    "vision": {
+     "bagProbs": [
+      0.88,
+      0.03,
+      0.03,
+      0.02,
+      0.02,
+      0.02
+     ],
+     "contrast": 0.05,
+     "usable": true
+    },
+    "answers": {
+     "lastSeasonHeavy": 1,
+     "flowersDropped": 2,
+     "bugSeen": 0,
+     "berryHoles": 0,
+     "treeAgeOver20": 0,
+     "wholeFarm": 1
+    },
+    "plot": {
+     "lat": -2.48,
+     "lon": 29.1,
+     "rainDaysOver40mm90d": 1,
+     "rainAnomalyFloweringPct": 0,
+     "soilPh": null,
+     "soilSource": null,
+     "dataThrough": "2026-09-30"
+    }
+   },
+   "expect": {
+    "top": "normal_off_year",
+    "abstain": false
+   }
+  },
+  {
+   "id": "V22",
+   "synthetic": true,
+   "name": "old + acid conflict",
+   "rationale": "Old trees and acid soil both plausible: top two close, send to a person.",
+   "input": {
+    "vision": {
+     "bagProbs": [
+      0.88,
+      0.03,
+      0.03,
+      0.02,
+      0.02,
+      0.02
+     ],
+     "contrast": 0.05,
+     "usable": true
+    },
+    "answers": {
+     "lastSeasonHeavy": 2,
+     "flowersDropped": 2,
+     "bugSeen": 2,
+     "berryHoles": 2,
+     "treeAgeOver20": 1,
+     "wholeFarm": 2
+    },
+    "plot": {
+     "lat": -2.48,
+     "lon": 29.1,
+     "rainDaysOver40mm90d": 1,
+     "rainAnomalyFloweringPct": 0,
+     "soilPh": 4.7,
+     "soilSource": "isdasoil",
+     "dataThrough": "2026-09-30"
+    }
+   },
+   "expect": {
+    "abstain": true,
+    "reasons": [
+     "top_two_close"
+    ]
+   }
+  },
+  {
+   "id": "V23",
+   "synthetic": true,
+   "name": "unsure answers carry no evidence",
+   "rationale": "Same as healthy/no-evidence case; unsure must not tilt anything.",
+   "input": {
+    "vision": {
+     "bagProbs": [
+      0.88,
+      0.03,
+      0.03,
+      0.02,
+      0.02,
+      0.02
+     ],
+     "contrast": 0.05,
+     "usable": true
+    },
+    "answers": {
+     "lastSeasonHeavy": 2,
+     "flowersDropped": 2,
+     "bugSeen": 2,
+     "berryHoles": 2,
+     "treeAgeOver20": 2,
+     "wholeFarm": 2
+    },
+    "plot": {
+     "lat": -2.48,
+     "lon": 29.1,
+     "rainDaysOver40mm90d": 1,
+     "rainAnomalyFloweringPct": -5,
+     "soilPh": 5.6,
+     "soilSource": "isdasoil",
+     "dataThrough": "2026-09-30"
+    }
+   },
+   "expect": {
+    "abstain": true,
+    "reasons": [
+     "top_cause_low"
+    ]
+   }
+  },
+  {
+   "id": "V24",
+   "synthetic": true,
+   "name": "rust leaves but soil acid, one area",
+   "rationale": "Mild rust + acid pH + one area: ambiguous, abstain.",
+   "input": {
+    "vision": {
+     "bagProbs": [
+      0.2,
+      0.55,
+      0.1,
+      0.05,
+      0.05,
+      0.05
+     ],
+     "contrast": 0.15,
+     "usable": true
+    },
+    "answers": {
+     "lastSeasonHeavy": 2,
+     "flowersDropped": 2,
+     "bugSeen": 2,
+     "berryHoles": 2,
+     "treeAgeOver20": 2,
+     "wholeFarm": 0
+    },
+    "plot": {
+     "lat": -2.48,
+     "lon": 29.1,
+     "rainDaysOver40mm90d": 2,
+     "rainAnomalyFloweringPct": 0,
+     "soilPh": 4.7,
+     "soilSource": "isdasoil",
+     "dataThrough": "2026-09-30"
+    }
+   },
+   "expect": {
+    "abstain": true,
+    "reasons": [
+     "money_needs_high_conf"
+    ]
+   }
+  },
+  {
+   "id": "V25",
+   "synthetic": true,
+   "name": "wet + rust + dry flowering mixed",
+   "rationale": "Rain days high but flowering dry; healthy leaves; farmer says flowers dropped: weather causes compete.",
+   "input": {
+    "vision": {
+     "bagProbs": [
+      0.88,
+      0.03,
+      0.03,
+      0.02,
+      0.02,
+      0.02
+     ],
+     "contrast": 0.05,
+     "usable": true
+    },
+    "answers": {
+     "lastSeasonHeavy": 2,
+     "flowersDropped": 1,
+     "bugSeen": 2,
+     "berryHoles": 2,
+     "treeAgeOver20": 2,
+     "wholeFarm": 1
+    },
+    "plot": {
+     "lat": -2.48,
+     "lon": 29.1,
+     "rainDaysOver40mm90d": 7,
+     "rainAnomalyFloweringPct": -30,
+     "soilPh": 5.6,
+     "soilSource": "isdasoil",
+     "dataThrough": "2026-09-30"
+    }
+   },
+   "expect": {
+    "abstain": true,
+    "reasons": [
+     "top_cause_low",
+     "top_two_close"
+    ]
+   }
+  },
+  {
+   "id": "V26",
+   "synthetic": true,
+   "name": "cercospora, whole farm, old trees",
+   "rationale": "Cercospora lesions common on stressed old trees; leaf cause but whole farm and old: ambiguous.",
+   "input": {
+    "vision": {
+     "bagProbs": [
+      0.05,
+      0.05,
+      0.8,
+      0.05,
+      0.03,
+      0.02
+     ],
+     "contrast": 0.1,
+     "usable": true
+    },
+    "answers": {
+     "lastSeasonHeavy": 2,
+     "flowersDropped": 2,
+     "bugSeen": 2,
+     "berryHoles": 2,
+     "treeAgeOver20": 1,
+     "wholeFarm": 1
+    },
+    "plot": {
+     "lat": -2.48,
+     "lon": 29.1,
+     "rainDaysOver40mm90d": 1,
+     "rainAnomalyFloweringPct": 0,
+     "soilPh": 5.6,
+     "soilSource": "isdasoil",
+     "dataThrough": "2026-09-30"
+    }
+   },
+   "expect": {
+    "abstain": true,
+    "reasons": [
+     "top_cause_low",
+     "top_two_close"
+    ]
+   }
+  },
+  {
+   "id": "V27",
+   "synthetic": true,
+   "name": "drought + off-year",
+   "rationale": "Dry flowering, flowers dropped, heavy last year: two weather causes share; do not state one confidently.",
+   "input": {
+    "vision": {
+     "bagProbs": [
+      0.88,
+      0.03,
+      0.03,
+      0.02,
+      0.02,
+      0.02
+     ],
+     "contrast": 0.05,
+     "usable": true
+    },
+    "answers": {
+     "lastSeasonHeavy": 1,
+     "flowersDropped": 1,
+     "bugSeen": 2,
+     "berryHoles": 2,
+     "treeAgeOver20": 2,
+     "wholeFarm": 1
+    },
+    "plot": {
+     "lat": -2.48,
+     "lon": 29.1,
+     "rainDaysOver40mm90d": 1,
+     "rainAnomalyFloweringPct": -40,
+     "soilPh": 5.6,
+     "soilSource": "isdasoil",
+     "dataThrough": "2026-09-30"
+    }
+   },
+   "expect": {
+    "abstain": true,
+    "reasons": [
+     "top_two_close"
+    ]
+   }
+  },
+  {
+   "id": "V28",
+   "synthetic": true,
+   "name": "rust, high contrast, rain, everything agrees",
+   "rationale": "Rust 85%, wet, single-row contrast, no bug, young trees, no bumper crop.",
+   "input": {
+    "vision": {
+     "bagProbs": [
+      0.05,
+      0.85,
+      0.03,
+      0.02,
+      0.03,
+      0.02
+     ],
+     "contrast": 0.8,
+     "usable": true
+    },
+    "answers": {
+     "lastSeasonHeavy": 0,
+     "flowersDropped": 0,
+     "bugSeen": 0,
+     "berryHoles": 0,
+     "treeAgeOver20": 0,
+     "wholeFarm": 0
+    },
+    "plot": {
+     "lat": -2.48,
+     "lon": 29.1,
+     "rainDaysOver40mm90d": 6,
+     "rainAnomalyFloweringPct": 5,
+     "soilPh": 5.8,
+     "soilSource": "isdasoil",
+     "dataThrough": "2026-09-30"
+    }
+   },
+   "expect": {
+    "top": "leaf_rust",
+    "abstain": false
+   }
+  },
+  {
+   "id": "V29",
+   "synthetic": true,
+   "name": "healthy leaves, heavy rain + acid + one area",
+   "rationale": "Erosion/acidity both plausible on a slope: close call.",
+   "input": {
+    "vision": {
+     "bagProbs": [
+      0.88,
+      0.03,
+      0.03,
+      0.02,
+      0.02,
+      0.02
+     ],
+     "contrast": 0.05,
+     "usable": true
+    },
+    "answers": {
+     "lastSeasonHeavy": 2,
+     "flowersDropped": 2,
+     "bugSeen": 2,
+     "berryHoles": 2,
+     "treeAgeOver20": 2,
+     "wholeFarm": 0
+    },
+    "plot": {
+     "lat": -2.48,
+     "lon": 29.1,
+     "rainDaysOver40mm90d": 7,
+     "rainAnomalyFloweringPct": 0,
+     "soilPh": 4.8,
+     "soilSource": "isdasoil",
+     "dataThrough": "2026-09-30"
+    }
+   },
+   "expect": {
+    "abstain": true,
+    "reasons": [
+     "top_two_close"
+    ]
+   }
+  },
+  {
+   "id": "V30",
+   "synthetic": true,
+   "name": "insect strong all signals",
+   "rationale": "Bug seen, holes, miner leaves, whole farm unsure: insect pest.",
+   "input": {
+    "vision": {
+     "bagProbs": [
+      0.07,
+      0.03,
+      0.03,
+      0.02,
+      0.83,
+      0.02
+     ],
+     "contrast": 0.5,
+     "usable": true
+    },
+    "answers": {
+     "lastSeasonHeavy": 0,
+     "flowersDropped": 0,
+     "bugSeen": 1,
+     "berryHoles": 1,
+     "treeAgeOver20": 0,
+     "wholeFarm": 2
+    },
+    "plot": {
+     "lat": -2.48,
+     "lon": 29.1,
+     "rainDaysOver40mm90d": 1,
+     "rainAnomalyFloweringPct": 0,
+     "soilPh": 5.8,
+     "soilSource": "isdasoil",
+     "dataThrough": "2026-09-30"
+    }
+   },
+   "expect": {
+    "top": "insect_pest",
+    "abstain": false
+   }
+  }
+ ]
+}

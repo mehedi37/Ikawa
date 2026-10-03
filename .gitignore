@@ -1,0 +1,25 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Secrets
+.env
+kaggle.json
+
+# Data & model artifacts (large; live in data/ or on Kaggle)
+data/raw/
+data/interim/
+*.zip
+*.pt
+*.pth
+*.onnx
+!app/public/model/*.onnx
+runs/
+checkpoints/

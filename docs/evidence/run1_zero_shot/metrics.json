@@ -1,0 +1,576 @@
+{
+ "temperature": 0.6455073952674866,
+ "best_epoch": 23,
+ "args": {
+  "data": "auto",
+  "out_dir": "/kaggle/working/out",
+  "ckpt_dir": "/kaggle/working/ckpt",
+  "arch": "mobilenetv2_100",
+  "size": 224,
+  "epochs": 25,
+  "batch_size": 64,
+  "lr": 0.002,
+  "wd": 0.0001,
+  "workers": 4,
+  "train_sources": "jmuben,bracol,plantvillage,cassava",
+  "resume": "auto",
+  "max_minutes": 0,
+  "seed": 1337,
+  "smoke": false
+ },
+ "val": {
+  "n": 1383,
+  "temperature": 0.6455073952674866,
+  "accuracy": 0.9725234996384671,
+  "macro_f1": 0.960278501454972,
+  "ece": 0.01510514735916953,
+  "per_class_recall": {
+   "healthy": 1.0,
+   "leaf_rust": 0.9649805447470817,
+   "cercospora": 0.9318181818181818,
+   "phoma": 0.9240506329113924,
+   "leaf_miner": 0.9592592592592593,
+   "not_coffee": 1.0
+  },
+  "selective": [
+   {
+    "threshold": 0.0,
+    "answered_share": 1.0,
+    "abstain_share": 0.0,
+    "accuracy_on_answered": 0.9725
+   },
+   {
+    "threshold": 0.05,
+    "answered_share": 1.0,
+    "abstain_share": 0.0,
+    "accuracy_on_answered": 0.9725
+   },
+   {
+    "threshold": 0.1,
+    "answered_share": 1.0,
+    "abstain_share": 0.0,
+    "accuracy_on_answered": 0.9725
+   },
+   {
+    "threshold": 0.15,
+    "answered_share": 1.0,
+    "abstain_share": 0.0,
+    "accuracy_on_answered": 0.9725
+   },
+   {
+    "threshold": 0.2,
+    "answered_share": 1.0,
+    "abstain_share": 0.0,
+    "accuracy_on_answered": 0.9725
+   },
+   {
+    "threshold": 0.25,
+    "answered_share": 1.0,
+    "abstain_share": 0.0,
+    "accuracy_on_answered": 0.9725
+   },
+   {
+    "threshold": 0.3,
+    "answered_share": 1.0,
+    "abstain_share": 0.0,
+    "accuracy_on_answered": 0.9725
+   },
+   {
+    "threshold": 0.35,
+    "answered_share": 1.0,
+    "abstain_share": 0.0,
+    "accuracy_on_answered": 0.9725
+   },
+   {
+    "threshold": 0.4,
+    "answered_share": 0.9993,
+    "abstain_share": 0.0007,
+    "accuracy_on_answered": 0.9732
+   },
+   {
+    "threshold": 0.45,
+    "answered_share": 0.9971,
+    "abstain_share": 0.0029,
+    "accuracy_on_answered": 0.9753
+   },
+   {
+    "threshold": 0.5,
+    "answered_share": 0.9964,
+    "abstain_share": 0.0036,
+    "accuracy_on_answered": 0.9753
+   },
+   {
+    "threshold": 0.55,
+    "answered_share": 0.9949,
+    "abstain_share": 0.0051,
+    "accuracy_on_answered": 0.9753
+   },
+   {
+    "threshold": 0.6,
+    "answered_share": 0.992,
+    "abstain_share": 0.008,
+    "accuracy_on_answered": 0.9774
+   },
+   {
+    "threshold": 0.65,
+    "answered_share": 0.9899,
+    "abstain_share": 0.0101,
+    "accuracy_on_answered": 0.9774
+   },
+   {
+    "threshold": 0.7,
+    "answered_share": 0.9863,
+    "abstain_share": 0.0137,
+    "accuracy_on_answered": 0.9787
+   },
+   {
+    "threshold": 0.75,
+    "answered_share": 0.9848,
+    "abstain_share": 0.0152,
+    "accuracy_on_answered": 0.9794
+   },
+   {
+    "threshold": 0.8,
+    "answered_share": 0.9798,
+    "abstain_share": 0.0202,
+    "accuracy_on_answered": 0.9815
+   },
+   {
+    "threshold": 0.85,
+    "answered_share": 0.9732,
+    "abstain_share": 0.0268,
+    "accuracy_on_answered": 0.9844
+   },
+   {
+    "threshold": 0.9,
+    "answered_share": 0.961,
+    "abstain_share": 0.039,
+    "accuracy_on_answered": 0.985
+   },
+   {
+    "threshold": 0.95,
+    "answered_share": 0.9306,
+    "abstain_share": 0.0694,
+    "accuracy_on_answered": 0.9915
+   }
+  ],
+  "reliability": [
+   [
+    0.3843924403190613,
+    0.0,
+    1
+   ],
+   [
+    0.4242130219936371,
+    0.0,
+    3
+   ],
+   [
+    0.5145368576049805,
+    1.0,
+    3
+   ],
+   [
+    0.5880663990974426,
+    0.25,
+    4
+   ],
+   [
+    0.6235776543617249,
+    1.0,
+    3
+   ],
+   [
+    0.6898119449615479,
+    0.5,
+    6
+   ],
+   [
+    0.7714330554008484,
+    0.625,
+    8
+   ],
+   [
+    0.8375680446624756,
+    0.6153846153846154,
+    13
+   ],
+   [
+    0.9056246876716614,
+    0.7692307692307693,
+    39
+   ],
+   [
+    0.9878914952278137,
+    0.9915579432079816,
+    1303
+   ]
+  ],
+  "per_source_accuracy": {
+   "bracol": 0.8814432989690721,
+   "cassava": 1.0,
+   "jmuben": 0.975,
+   "plantvillage": 1.0
+  }
+ },
+ "test": {
+  "n": 1346,
+  "temperature": 0.6455073952674866,
+  "accuracy": 0.9895988112927192,
+  "macro_f1": 0.9819845478376802,
+  "ece": 0.016128694741013857,
+  "per_class_recall": {
+   "healthy": 1.0,
+   "leaf_rust": 0.9863636363636363,
+   "cercospora": 0.9620253164556962,
+   "phoma": 0.9777777777777777,
+   "leaf_miner": 0.9806201550387597,
+   "not_coffee": 1.0
+  },
+  "selective": [
+   {
+    "threshold": 0.0,
+    "answered_share": 1.0,
+    "abstain_share": 0.0,
+    "accuracy_on_answered": 0.9896
+   },
+   {
+    "threshold": 0.05,
+    "answered_share": 1.0,
+    "abstain_share": 0.0,
+    "accuracy_on_answered": 0.9896
+   },
+   {
+    "threshold": 0.1,
+    "answered_share": 1.0,
+    "abstain_share": 0.0,
+    "accuracy_on_answered": 0.9896
+   },
+   {
+    "threshold": 0.15,
+    "answered_share": 1.0,
+    "abstain_share": 0.0,
+    "accuracy_on_answered": 0.9896
+   },
+   {
+    "threshold": 0.2,
+    "answered_share": 1.0,
+    "abstain_share": 0.0,
+    "accuracy_on_answered": 0.9896
+   },
+   {
+    "threshold": 0.25,
+    "answered_share": 1.0,
+    "abstain_share": 0.0,
+    "accuracy_on_answered": 0.9896
+   },
+   {
+    "threshold": 0.3,
+    "answered_share": 1.0,
+    "abstain_share": 0.0,
+    "accuracy_on_answered": 0.9896
+   },
+   {
+    "threshold": 0.35,
+    "answered_share": 1.0,
+    "abstain_share": 0.0,
+    "accuracy_on_answered": 0.9896
+   },
+   {
+    "threshold": 0.4,
+    "answered_share": 1.0,
+    "abstain_share": 0.0,
+    "accuracy_on_answered": 0.9896
+   },
+   {
+    "threshold": 0.45,
+    "answered_share": 0.9993,
+    "abstain_share": 0.0007,
+    "accuracy_on_answered": 0.9903
+   },
+   {
+    "threshold": 0.5,
+    "answered_share": 0.9978,
+    "abstain_share": 0.0022,
+    "accuracy_on_answered": 0.9911
+   },
+   {
+    "threshold": 0.55,
+    "answered_share": 0.9948,
+    "abstain_share": 0.0052,
+    "accuracy_on_answered": 0.9925
+   },
+   {
+    "threshold": 0.6,
+    "answered_share": 0.9933,
+    "abstain_share": 0.0067,
+    "accuracy_on_answered": 0.9933
+   },
+   {
+    "threshold": 0.65,
+    "answered_share": 0.9889,
+    "abstain_share": 0.0111,
+    "accuracy_on_answered": 0.994
+   },
+   {
+    "threshold": 0.7,
+    "answered_share": 0.9874,
+    "abstain_share": 0.0126,
+    "accuracy_on_answered": 0.9947
+   },
+   {
+    "threshold": 0.75,
+    "answered_share": 0.9829,
+    "abstain_share": 0.0171,
+    "accuracy_on_answered": 0.9955
+   },
+   {
+    "threshold": 0.8,
+    "answered_share": 0.9785,
+    "abstain_share": 0.0215,
+    "accuracy_on_answered": 0.9962
+   },
+   {
+    "threshold": 0.85,
+    "answered_share": 0.9747,
+    "abstain_share": 0.0253,
+    "accuracy_on_answered": 0.9962
+   },
+   {
+    "threshold": 0.9,
+    "answered_share": 0.9673,
+    "abstain_share": 0.0327,
+    "accuracy_on_answered": 0.9985
+   },
+   {
+    "threshold": 0.95,
+    "answered_share": 0.9391,
+    "abstain_share": 0.0609,
+    "accuracy_on_answered": 1.0
+   }
+  ],
+  "reliability": [
+   [
+    0.4424135982990265,
+    0.0,
+    1
+   ],
+   [
+    0.49618005752563477,
+    0.75,
+    4
+   ],
+   [
+    0.5536023378372192,
+    0.25,
+    4
+   ],
+   [
+    0.6241282820701599,
+    0.8333333333333334,
+    6
+   ],
+   [
+    0.7045053839683533,
+    0.6666666666666666,
+    6
+   ],
+   [
+    0.772576630115509,
+    0.875,
+    8
+   ],
+   [
+    0.8462251424789429,
+    0.9,
+    10
+   ],
+   [
+    0.9107887744903564,
+    0.8636363636363636,
+    22
+   ],
+   [
+    0.987423837184906,
+    0.9992217898832685,
+    1285
+   ]
+  ],
+  "per_source_accuracy": {
+   "bracol": 0.9509803921568627,
+   "cassava": 1.0,
+   "jmuben": 0.9923518164435946,
+   "plantvillage": 1.0
+  }
+ },
+ "ext_rocole": {
+  "n": 1477,
+  "temperature": 0.6455073952674866,
+  "accuracy": 0.0,
+  "macro_f1": 0.0,
+  "ece": 0.9603152991513441,
+  "per_class_recall": {
+   "healthy": 0.0,
+   "leaf_rust": 0.0
+  },
+  "selective": [
+   {
+    "threshold": 0.0,
+    "answered_share": 1.0,
+    "abstain_share": 0.0,
+    "accuracy_on_answered": 0.0
+   },
+   {
+    "threshold": 0.05,
+    "answered_share": 1.0,
+    "abstain_share": 0.0,
+    "accuracy_on_answered": 0.0
+   },
+   {
+    "threshold": 0.1,
+    "answered_share": 1.0,
+    "abstain_share": 0.0,
+    "accuracy_on_answered": 0.0
+   },
+   {
+    "threshold": 0.15,
+    "answered_share": 1.0,
+    "abstain_share": 0.0,
+    "accuracy_on_answered": 0.0
+   },
+   {
+    "threshold": 0.2,
+    "answered_share": 1.0,
+    "abstain_share": 0.0,
+    "accuracy_on_answered": 0.0
+   },
+   {
+    "threshold": 0.25,
+    "answered_share": 1.0,
+    "abstain_share": 0.0,
+    "accuracy_on_answered": 0.0
+   },
+   {
+    "threshold": 0.3,
+    "answered_share": 1.0,
+    "abstain_share": 0.0,
+    "accuracy_on_answered": 0.0
+   },
+   {
+    "threshold": 0.35,
+    "answered_share": 1.0,
+    "abstain_share": 0.0,
+    "accuracy_on_answered": 0.0
+   },
+   {
+    "threshold": 0.4,
+    "answered_share": 1.0,
+    "abstain_share": 0.0,
+    "accuracy_on_answered": 0.0
+   },
+   {
+    "threshold": 0.45,
+    "answered_share": 1.0,
+    "abstain_share": 0.0,
+    "accuracy_on_answered": 0.0
+   },
+   {
+    "threshold": 0.5,
+    "answered_share": 1.0,
+    "abstain_share": 0.0,
+    "accuracy_on_answered": 0.0
+   },
+   {
+    "threshold": 0.55,
+    "answered_share": 1.0,
+    "abstain_share": 0.0,
+    "accuracy_on_answered": 0.0
+   },
+   {
+    "threshold": 0.6,
+    "answered_share": 1.0,
+    "abstain_share": 0.0,
+    "accuracy_on_answered": 0.0
+   },
+   {
+    "threshold": 0.65,
+    "answered_share": 0.9985,
+    "abstain_share": 0.0015,
+    "accuracy_on_answered": 0.0
+   },
+   {
+    "threshold": 0.7,
+    "answered_share": 0.9962,
+    "abstain_share": 0.0038,
+    "accuracy_on_answered": 0.0
+   },
+   {
+    "threshold": 0.75,
+    "answered_share": 0.9917,
+    "abstain_share": 0.0083,
+    "accuracy_on_answered": 0.0
+   },
+   {
+    "threshold": 0.8,
+    "answered_share": 0.9879,
+    "abstain_share": 0.0121,
+    "accuracy_on_answered": 0.0
+   },
+   {
+    "threshold": 0.85,
+    "answered_share": 0.9728,
+    "abstain_share": 0.0272,
+    "accuracy_on_answered": 0.0
+   },
+   {
+    "threshold": 0.9,
+    "answered_share": 0.9334,
+    "abstain_share": 0.0666,
+    "accuracy_on_answered": 0.0
+   },
+   {
+    "threshold": 0.95,
+    "answered_share": 0.7821,
+    "abstain_share": 0.2179,
+    "accuracy_on_answered": 0.0
+   }
+  ],
+  "reliability": [
+   [
+    0.6272832751274109,
+    0.0,
+    2
+   ],
+   [
+    0.6936221718788147,
+    0.0,
+    7
+   ],
+   [
+    0.7674680948257446,
+    0.0,
+    7
+   ],
+   [
+    0.8435209393501282,
+    0.0,
+    36
+   ],
+   [
+    0.909422755241394,
+    0.0,
+    132
+   ],
+   [
+    0.9733251929283142,
+    0.0,
+    1138
+   ]
+  ],
+  "per_source_accuracy": {
+   "rocole": 0.0
+  },
+  "other_pest_mean_confidence": 0.972554087638855,
+  "other_pest_share_below_0.6": 0.0
+ }
+}

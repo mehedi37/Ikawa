@@ -1,0 +1,44 @@
+:root { --bg:#fffaf3; --fg:#1d1209; --brand:#3b2314; --acc:#0b6b3a; --warn:#b00020; --mut:#5c4a3c; --card:#fff; --line:#3b2314; color-scheme: light; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--fg); font:18px/1.4 system-ui,sans-serif; }
+.app { max-width:560px; margin:0 auto; min-height:100vh; }
+main { padding:16px; }
+h1 { font-size:1.5rem; margin:.3rem 0 1rem; }
+.step { margin:0; color:var(--mut); font-weight:700; font-size:.9rem; text-transform:uppercase; }
+.muted { color:var(--mut); }
+.demo { background:var(--warn); color:#fff; font-weight:800; text-align:center; padding:8px; position:sticky; top:0; z-index:5; }
+.btn { display:block; width:100%; min-height:56px; margin:10px 0; padding:12px 16px; font-size:1.15rem; font-weight:700; border-radius:14px; border:3px solid var(--brand); background:var(--brand); color:#fff; cursor:pointer; }
+.btn.ghost { background:#fff; color:var(--brand); }
+.btn.danger { background:var(--warn); border-color:var(--warn); }
+.btn.audio { display:inline-block; width:auto; min-height:48px; }
+.btn:disabled { opacity:.4; }
+.btn.sel { background:var(--acc); border-color:var(--acc); color:#fff; }
+.row { display:flex; gap:10px; } .row > * { flex:1; }
+.big { font-size:3.2rem; text-align:center; margin:.2rem 0; }
+.card { background:var(--card); border:3px solid var(--line); border-radius:14px; padding:14px; margin:12px 0; }
+.card.warn { border-color:var(--warn); background:#fff1f1; }
+.card.ok { border-color:var(--acc); }
+input[type=text], input[type=password], input[type=tel], textarea { width:100%; font-size:1.2rem; padding:12px; border:3px solid var(--line); border-radius:12px; background:#fff; color:var(--fg); }
+.bar-row { margin:10px 0; } .bar-label { display:flex; justify-content:space-between; }
+.bar { height:18px; background:#e8dccd; border-radius:9px; overflow:hidden; } .fill { height:100%; background:var(--mut); } .fill.hi { background:var(--acc); }
+.thumbs { display:grid; grid-template-columns:repeat(5,1fr); gap:6px; }
+.thumb { position:relative; aspect-ratio:1; background:#e8dccd; border-radius:8px; overflow:hidden; border:3px solid transparent; }
+.thumb img { width:100%; height:100%; object-fit:cover; } .thumb.bad { border-color:var(--warn); } .thumb.good { border-color:var(--acc); }
+.thumb span { position:absolute; bottom:0; left:0; right:0; font-size:.7rem; background:#000a; color:#fff; text-align:center; }
+ul.plain { padding-left:20px; margin:6px 0; }
+table { width:100%; border-collapse:collapse; } td { padding:6px 4px; border-bottom:1px solid #d9cbb8; vertical-align:top; } td:first-child { font-weight:700; width:38%; }
+a.btn { text-decoration:none; text-align:center; }
+@media (prefers-color-scheme:dark) { :root { --bg:#14100c; --fg:#fff5e8; --card:#211a14; --brand:#e9c9a6; --line:#e9c9a6; --mut:#cdb9a3; --acc:#4cd98a; } .btn { color:#14100c; } .btn.ghost { background:var(--card); color:var(--brand); } .btn.sel { color:#14100c; } .card.warn { background:#3a1418; } input,textarea { background:var(--card)!important; } .bar { background:#3a2e24; } .thumb { background:#3a2e24; } }
+.btn.danger { color:#fff; }
+.langbar { display:flex; flex-wrap:wrap; gap:8px; align-items:center; padding:8px 16px 0; }
+.langbar select { min-height:44px; font-size:1rem; border:3px solid var(--line); border-radius:10px; background:var(--card); color:var(--fg); padding:4px 8px; }
+.chip { background:var(--acc); color:#fff; font-weight:800; font-size:.8rem; padding:4px 8px; border-radius:8px; }
+.badge { display:inline-block; margin:4px 0; background:#fff3c4; color:#4a3500; border:2px solid #c49a00; border-radius:8px; padding:4px 8px; font-size:.85rem; font-weight:700; }
+input[type=date] { width:100%; font-size:1.1rem; min-height:48px; padding:8px; border:3px solid var(--line); border-radius:12px; background:var(--card); color:var(--fg); }
+code { display:block; white-space:normal; word-break:break-all; }
+main, .card { overflow-wrap:anywhere; }
+input[type=checkbox] { width:28px; height:28px; vertical-align:middle; }
+select.full { display:block; width:100%; margin-top:6px; min-height:48px; font-size:1.1rem; border:3px solid var(--line); border-radius:12px; background:var(--card); color:var(--fg); padding:6px 8px; }
+.area-now { font-weight:700; }
+.card.cannot { border-color:var(--warn); }
+.optimg { display:block; max-width:100%; max-height:220px; margin:8px auto; border-radius:12px; }

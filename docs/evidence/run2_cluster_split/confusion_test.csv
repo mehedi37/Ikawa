@@ -1,0 +1,7 @@
+true\pred,healthy,leaf_rust,cercospora,phoma,leaf_miner,not_coffee
+healthy,35,0,0,0,0,0
+leaf_rust,0,219,1,0,0,0
+cercospora,1,5,71,0,1,1
+phoma,0,0,0,132,3,0
+leaf_miner,1,1,0,4,249,3
+not_coffee,0,0,0,0,0,619

@@ -1,0 +1,347 @@
+{
+ "lang": "en",
+ "name": "English",
+ "machineDrafted": false,
+ "engine": "authored",
+ "cards": [
+  {
+   "id": "A01",
+   "cause": "leaf_rust",
+   "costsMoney": false,
+   "text": "Prune your trees so air and light reach the leaves. This helps leaves dry and slows leaf rust.",
+   "reviewed": false,
+   "sources": [
+    "https://www.globalcoffeeplatform.org/wp-content/uploads/2021/03/KCS-MANUAL-review-03112020.pdf",
+    "https://www3.ctahr.hawaii.edu/oc/freepubs/pdf/PD-126.pdf"
+   ]
+  },
+  {
+   "id": "A02",
+   "cause": "leaf_rust",
+   "costsMoney": true,
+   "text": "Ask the extension officer which treatment is approved for leaf rust and when to apply it. Use only what they advise.",
+   "reviewed": false,
+   "sources": [
+    "https://www.globalcoffeeplatform.org/wp-content/uploads/2021/03/KCS-MANUAL-review-03112020.pdf"
+   ]
+  },
+  {
+   "id": "A03",
+   "cause": "leaf_rust",
+   "costsMoney": false,
+   "text": "When you replace trees, ask the extension officer about coffee varieties that resist leaf rust.",
+   "reviewed": false,
+   "sources": [
+    "https://www.globalcoffeeplatform.org/wp-content/uploads/2021/03/KCS-MANUAL-review-03112020.pdf"
+   ]
+  },
+  {
+   "id": "A04",
+   "cause": "other_leaf_disease",
+   "costsMoney": false,
+   "text": "Prune and remove extra shoots on time. Open trees let air in and make leaf disease less likely.",
+   "reviewed": false,
+   "sources": [
+    "https://www.globalcoffeeplatform.org/wp-content/uploads/2021/03/KCS-MANUAL-review-03112020.pdf",
+    "https://infonet-biovision.org/crops-fruits-vegetables/coffee-revised"
+   ]
+  },
+  {
+   "id": "A05",
+   "cause": "other_leaf_disease",
+   "costsMoney": false,
+   "text": "Show the sick leaves to the extension officer before you buy any spray. Different leaf diseases need different action.",
+   "reviewed": false,
+   "sources": [
+    "https://www.globalcoffeeplatform.org/wp-content/uploads/2021/03/KCS-MANUAL-review-03112020.pdf"
+   ]
+  },
+  {
+   "id": "A06",
+   "cause": "insect_pest",
+   "costsMoney": false,
+   "text": "Pick all ripe berries and collect fallen berries. Remove berries with small holes. This slows the spread of the pest.",
+   "reviewed": false,
+   "sources": [
+    "https://infonet-biovision.org/crops-fruits-vegetables/coffee-revised",
+    "https://www3.ctahr.hawaii.edu/oc/freepubs/pdf/PD-126.pdf"
+   ]
+  },
+  {
+   "id": "A07",
+   "cause": "insect_pest",
+   "costsMoney": false,
+   "text": "Prune your trees and remove extra shoots. Antestia bugs like thick leaves.",
+   "reviewed": false,
+   "sources": [
+    "https://infonet-biovision.org/crops-fruits-vegetables/coffee-revised"
+   ]
+  },
+  {
+   "id": "A08",
+   "cause": "insect_pest",
+   "costsMoney": true,
+   "text": "Ask the extension officer which treatment is approved for this pest. Do not spray before they confirm.",
+   "reviewed": false,
+   "sources": [
+    "https://www.globalcoffeeplatform.org/wp-content/uploads/2021/03/KCS-MANUAL-review-03112020.pdf",
+    "https://infonet-biovision.org/crops-fruits-vegetables/coffee-revised"
+   ]
+  },
+  {
+   "id": "A09",
+   "cause": "heavy_rain_damage",
+   "costsMoney": false,
+   "text": "On steep land, make terraces or other lines that hold soil, so heavy rain does not wash the soil away.",
+   "reviewed": false,
+   "sources": [
+    "https://www.globalcoffeeplatform.org/wp-content/uploads/2021/03/KCS-MANUAL-review-03112020.pdf"
+   ]
+  },
+  {
+   "id": "A10",
+   "cause": "heavy_rain_damage",
+   "costsMoney": false,
+   "text": "After heavy rain, check your leaves for rust. Prune so that air can move through the trees.",
+   "reviewed": false,
+   "sources": [
+    "https://infonet-biovision.org/crops-fruits-vegetables/coffee-revised",
+    "https://www.frontiersin.org/journals/climate/articles/10.3389/fclim.2025.1699037/full"
+   ]
+  },
+  {
+   "id": "A11",
+   "cause": "drought_at_flowering",
+   "costsMoney": false,
+   "text": "Put mulch on the soil under your trees to keep water in. Keep the mulch away from the stem.",
+   "reviewed": false,
+   "sources": [
+    "https://www.globalcoffeeplatform.org/wp-content/uploads/2021/03/KCS-MANUAL-review-03112020.pdf",
+    "https://www.frontiersin.org/journals/climate/articles/10.3389/fclim.2025.1699037/full"
+   ]
+  },
+  {
+   "id": "A12",
+   "cause": "drought_at_flowering",
+   "costsMoney": false,
+   "text": "If you can water your trees, do it when the flower buds are ready and the rain has not come.",
+   "reviewed": false,
+   "sources": [
+    "https://www.globalcoffeeplatform.org/wp-content/uploads/2021/03/KCS-MANUAL-review-03112020.pdf"
+   ]
+  },
+  {
+   "id": "A13",
+   "cause": "drought_at_flowering",
+   "costsMoney": false,
+   "text": "For replanting, ask your cooperative about coffee varieties that handle dry weather well.",
+   "reviewed": false,
+   "sources": [
+    "https://www.globalcoffeeplatform.org/wp-content/uploads/2021/03/KCS-MANUAL-review-03112020.pdf"
+   ]
+  },
+  {
+   "id": "A14",
+   "cause": "soil_acidity_or_nutrient",
+   "costsMoney": false,
+   "text": "Test your soil every 2 to 3 years. Decide what to buy only after you see the result.",
+   "reviewed": false,
+   "sources": [
+    "https://www.globalcoffeeplatform.org/wp-content/uploads/2021/03/KCS-MANUAL-review-03112020.pdf",
+    "https://kenyacoffeeschool.golearn.co.ke/kcs-coffee-agronomy-2b-soil-science-and-soil-fertility/83821/uncategorized/bep3zc5cbf/"
+   ]
+  },
+  {
+   "id": "A15",
+   "cause": "soil_acidity_or_nutrient",
+   "costsMoney": true,
+   "text": "Put lime on the soil only as the soil test report says. Ask the extension officer how much.",
+   "reviewed": false,
+   "sources": [
+    "https://www.globalcoffeeplatform.org/wp-content/uploads/2021/03/KCS-MANUAL-review-03112020.pdf",
+    "https://kenyacoffeeschool.golearn.co.ke/kcs-coffee-agronomy-2b-soil-science-and-soil-fertility/83821/uncategorized/bep3zc5cbf/"
+   ]
+  },
+  {
+   "id": "A16",
+   "cause": "soil_acidity_or_nutrient",
+   "costsMoney": true,
+   "text": "Do not buy phosphate fertiliser unless the soil test advises it. The wrong fertiliser can give big cherries with no beans.",
+   "reviewed": false,
+   "sources": [
+    "https://www.globalcoffeeplatform.org/wp-content/uploads/2021/03/KCS-MANUAL-review-03112020.pdf"
+   ]
+  },
+  {
+   "id": "A17",
+   "cause": "old_trees_need_stumping",
+   "costsMoney": false,
+   "text": "Cutting old stems back to a stump lets new stems grow. It is advised after about 5 big harvests. Ask the extension officer first.",
+   "reviewed": false,
+   "sources": [
+    "https://www.globalcoffeeplatform.org/wp-content/uploads/2021/03/KCS-MANUAL-review-03112020.pdf"
+   ]
+  },
+  {
+   "id": "A18",
+   "cause": "old_trees_need_stumping",
+   "costsMoney": false,
+   "text": "Do not stump trees during a dry spell. The trees need rain to grow new shoots.",
+   "reviewed": false,
+   "sources": [
+    "https://www3.ctahr.hawaii.edu/oc/freepubs/pdf/PD-126.pdf"
+   ]
+  },
+  {
+   "id": "A19",
+   "cause": "old_trees_need_stumping",
+   "costsMoney": false,
+   "text": "Ask the extension officer about top-working or replanting old trees with disease-resistant coffee.",
+   "reviewed": false,
+   "sources": [
+    "https://www.globalcoffeeplatform.org/wp-content/uploads/2021/03/KCS-MANUAL-review-03112020.pdf",
+    "https://infonet-biovision.org/crops-fruits-vegetables/coffee-revised"
+   ]
+  },
+  {
+   "id": "A20",
+   "cause": "normal_off_year",
+   "costsMoney": false,
+   "text": "A very big harvest last season can make this season smaller. Part of this drop can be normal.",
+   "reviewed": false,
+   "sources": [
+    "https://www.eurekalert.org/news-releases/793119",
+    "https://www.globalcoffeeplatform.org/wp-content/uploads/2021/03/KCS-MANUAL-review-03112020.pdf"
+   ]
+  },
+  {
+   "id": "A21",
+   "cause": "normal_off_year",
+   "costsMoney": false,
+   "text": "Do not buy spray or fertiliser only because the harvest is smaller. Wait for a soil test or advice from a person.",
+   "reviewed": false,
+   "sources": [
+    "https://www.globalcoffeeplatform.org/wp-content/uploads/2021/03/KCS-MANUAL-review-03112020.pdf"
+   ]
+  },
+  {
+   "id": "A22",
+   "cause": "normal_off_year",
+   "costsMoney": false,
+   "text": "To protect next season, prune to open the trees. Test your soil, then choose fertiliser with the extension officer.",
+   "reviewed": false,
+   "sources": [
+    "https://www.globalcoffeeplatform.org/wp-content/uploads/2021/03/KCS-MANUAL-review-03112020.pdf"
+   ]
+  },
+  {
+   "id": "A23",
+   "cause": "unknown",
+   "costsMoney": false,
+   "text": "I cannot tell the cause yet. Ask the extension officer to visit and check the leaves, berries, soil and roots.",
+   "reviewed": false,
+   "sources": [
+    "https://www.globalcoffeeplatform.org/wp-content/uploads/2021/03/KCS-MANUAL-review-03112020.pdf"
+   ]
+  },
+  {
+   "id": "A24",
+   "cause": "any",
+   "costsMoney": false,
+   "text": "I am not sure. A person will help you. Send the SMS and wait for the answer before you spend money.",
+   "reviewed": false,
+   "sources": []
+  }
+ ],
+ "strings": {
+  "Q01": "Was your harvest last season unusually big?",
+  "Q02": "Did the flowers drop early, or fail to make fruit?",
+  "Q03": "Do you see this bug on your trees?",
+  "Q04": "Do some berries have small holes?",
+  "Q05": "Are most of your trees older than 20 years?",
+  "Q06": "Is the problem on the whole farm? Yes means the whole farm. No means only one area.",
+  "Q07": "Put 5 leaves from the WORST row in the bag.",
+  "Q08": "Now put 5 leaves from a GOOD row in the bag.",
+  "Q09": "Take a clear photo of each leaf on a dark cloth.",
+  "Q10": "Say your answer, or tap a button.",
+  "C01": "Do you agree to use this service? Say yes or no.",
+  "C02": "Can I share your farm record with your cooperative? Say yes or no.",
+  "C03": "Can we use your photos to improve the tool? Say yes or no.",
+  "yes": "Yes",
+  "no": "No",
+  "unsure": "Not sure",
+  "next": "Next",
+  "back": "Back",
+  "start": "Start",
+  "take_photo": "Take photo",
+  "worst_row": "Worst row",
+  "good_row": "Good row",
+  "play_audio": "Play audio",
+  "result_title": "What may be happening",
+  "not_sure_title": "Not sure — I am sending this to a person",
+  "not_sure_body": "I cannot give a safe answer. Send the SMS. An extension officer will reply. Do not buy anything yet.",
+  "send_sms": "Send SMS",
+  "evidence_used": "What I used",
+  "what_i_could_not_check": "What I could not check",
+  "machine_drafted_notice": "Machine-drafted translation — not checked by a native speaker",
+  "cannot_read_title": "I cannot read this leaf",
+  "cannot_read_body": "I cannot read this leaf — it may not be coffee, or it may be something I do not know. Retake the photo or send it to a person.",
+  "retake": "Retake",
+  "send_person": "Send to a person",
+  "area_title": "Where is the farm?",
+  "use_my_location": "Use my location",
+  "use_demo_area": "Use demo area (Mutira, Kirinyaga)",
+  "area_none": "No area chosen yet. Rain and soil will not be checked.",
+  "area_locating": "Finding your location…",
+  "area_gps": "Your location ({lat}, {lon}), inside the Kirinyaga map.",
+  "area_demo": "Demo area: {name}, Kenya ({lat}, {lon}).",
+  "area_failed": "I could not get your location. Choose the demo area, or try again.",
+  "area_outside": "Your location is outside the Kirinyaga map I have data for. Choose the demo area.",
+  "asof_label": "Rain data up to",
+  "asof_latest": "Latest ({date})",
+  "asof_note": "Pick an earlier date to see what the rain was like then.",
+  "asof_demo_btn": "Demo: after the April 2026 heavy rains",
+  "rain_asof": "Rain data up to {date}.",
+  "rain_caption": "Heaviest day in the last 90 days: {mm} mm (satellite estimate for ~5 km, may differ on your slope)",
+  "ev.contrast_low": "The leaves from the worst row and the good row look about the same.",
+  "ev.contrast:high": "The worst-row leaves look much sicker than the good-row leaves.",
+  "ev.leaf:rust_high": "The worst-row leaves show signs of leaf rust.",
+  "ev.leaf:rust_low": "The leaves show little sign of leaf rust.",
+  "ev.leaf:other_disease_high": "The leaves have spots from another leaf disease.",
+  "ev.leaf:other_disease_low": "The leaves have few spots from other leaf diseases.",
+  "ev.leaf:miner_high": "The leaves show tunnels made by leaf miner insects.",
+  "ev.leaf:healthy_high": "The leaves look mostly healthy.",
+  "ev.rain_wet_90d": "Heavy rain fell on 3 or more days in the last 90 days.",
+  "ev.rain_very_wet_90d": "Heavy rain fell on 6 or more days in the last 90 days.",
+  "ev.rain_none_90d": "There were no heavy rain days in the last 90 days.",
+  "ev.flowering_dry_strong": "The rain at flowering time was much lower than usual.",
+  "ev.flowering_dry_mild": "The rain at flowering time was a little lower than usual.",
+  "ev.flowering_normal": "The rain at flowering time was about normal.",
+  "ev.ph_low_strong": "The soil is quite acidic.",
+  "ev.ph_low_mild": "The soil is slightly acidic.",
+  "ev.ph_ok": "The soil acidity is fine for coffee.",
+  "ev.ph_high": "The soil is not acidic. It may lock up some food for the trees.",
+  "ev.lastSeasonHeavy_1": "You said last season’s harvest was unusually big.",
+  "ev.lastSeasonHeavy_0": "You said last season’s harvest was not unusually big.",
+  "ev.flowersDropped_1": "You said the flowers dropped early or did not make fruit.",
+  "ev.flowersDropped_0": "You said the flowers did not drop early.",
+  "ev.bugSeen_1": "You said you see this bug on your trees.",
+  "ev.bugSeen_0": "You said you do not see this bug.",
+  "ev.berryHoles_1": "You said some berries have small holes.",
+  "ev.berryHoles_0": "You said the berries have no small holes.",
+  "ev.treeAgeOver20_1": "You said most trees are older than 20 years.",
+  "ev.treeAgeOver20_0": "You said most trees are younger than 20 years.",
+  "ev.wholeFarm_1": "You said the problem is on the whole farm.",
+  "ev.wholeFarm_0": "You said the problem is only in one area.",
+  "nc.roots": "I could not check the roots.",
+  "nc.no_plot_data": "I have no rain or soil data for your area.",
+  "nc.leaf": "I could not read the leaves.",
+  "ab.photo_unusable": "I could not use the leaf photos.",
+  "ab.vision_low_conf": "The photos were not clear enough for me to be sure.",
+  "ab.top_cause_low": "No single cause stands out.",
+  "ab.top_two_close": "Two causes look almost equally likely.",
+  "ab.answers_contradict": "Your answers and the leaf photos do not agree.",
+  "ab.top_is_unknown": "The most likely answer is something I do not know.",
+  "ab.money_needs_high_conf": "I am not sure enough to tell you to spend money."
+ }
+}

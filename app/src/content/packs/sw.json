@@ -1,0 +1,439 @@
+{
+ "lang": "sw",
+ "name": "Kiswahili",
+ "machineDrafted": true,
+ "engine": "nllb-200-distilled-600M, then manual corrections by Claude (a non-native speaker) — NOT human-verified",
+ "cards": [
+  {
+   "id": "A01",
+   "cause": "leaf_rust",
+   "costsMoney": false,
+   "text": "Punguza miti yako ili hewa na nuru ifike kwenye majani. Hilo husaidia majani kukauka na kupunguza kasi ya kutu ya majani.",
+   "reviewed": false,
+   "sources": [
+    "https://www.globalcoffeeplatform.org/wp-content/uploads/2021/03/KCS-MANUAL-review-03112020.pdf",
+    "https://www3.ctahr.hawaii.edu/oc/freepubs/pdf/PD-126.pdf"
+   ]
+  },
+  {
+   "id": "A02",
+   "cause": "leaf_rust",
+   "costsMoney": true,
+   "text": "Uulize afisa ugani ni matibabu gani yanayokubaliwa kwa ajili ya kutu ya majani na wakati wa kuitumia. Tumia tu yale wanayowashauri.",
+   "reviewed": false,
+   "sources": [
+    "https://www.globalcoffeeplatform.org/wp-content/uploads/2021/03/KCS-MANUAL-review-03112020.pdf"
+   ]
+  },
+  {
+   "id": "A03",
+   "cause": "leaf_rust",
+   "costsMoney": false,
+   "text": "Unapobadilisha miti, muulize afisa wa kupanua juu ya aina za kahawa zinazoweza kupinga kutu ya majani.",
+   "reviewed": false,
+   "sources": [
+    "https://www.globalcoffeeplatform.org/wp-content/uploads/2021/03/KCS-MANUAL-review-03112020.pdf"
+   ]
+  },
+  {
+   "id": "A04",
+   "cause": "other_leaf_disease",
+   "costsMoney": false,
+   "text": "Punguza na uondoe miche ya ziada kwa wakati unaofaa. Miti iliyo wazi huingiza hewa na kufanya uwezekano wa kupatwa na magonjwa ya majani ukuwe mdogo.",
+   "reviewed": false,
+   "sources": [
+    "https://www.globalcoffeeplatform.org/wp-content/uploads/2021/03/KCS-MANUAL-review-03112020.pdf",
+    "https://infonet-biovision.org/crops-fruits-vegetables/coffee-revised"
+   ]
+  },
+  {
+   "id": "A05",
+   "cause": "other_leaf_disease",
+   "costsMoney": false,
+   "text": "Mwonyeshe afisa ugani majani yenye ugonjwa kabla ya kununua dawa yoyote. Magonjwa tofauti ya majani yanahitaji hatua tofauti.",
+   "reviewed": false,
+   "sources": [
+    "https://www.globalcoffeeplatform.org/wp-content/uploads/2021/03/KCS-MANUAL-review-03112020.pdf"
+   ]
+  },
+  {
+   "id": "A06",
+   "cause": "insect_pest",
+   "costsMoney": false,
+   "text": "Pokea matunda yote yaliyokomaa na kukusanya matunda yaliyoanguka. Ondoa matunda yenye mashimo madogo. Hilo hupunguza kasi ya kuenea kwa maradhi.",
+   "reviewed": false,
+   "sources": [
+    "https://infonet-biovision.org/crops-fruits-vegetables/coffee-revised",
+    "https://www3.ctahr.hawaii.edu/oc/freepubs/pdf/PD-126.pdf"
+   ]
+  },
+  {
+   "id": "A07",
+   "cause": "insect_pest",
+   "costsMoney": false,
+   "text": "Punguza miti yako na uondoe shina za ziada. Antestia hubeba kama majani mazito.",
+   "reviewed": false,
+   "sources": [
+    "https://infonet-biovision.org/crops-fruits-vegetables/coffee-revised"
+   ]
+  },
+  {
+   "id": "A08",
+   "cause": "insect_pest",
+   "costsMoney": true,
+   "text": "Uulize afisa ugani ni aina gani ya matibabu ambayo yamekubaliwa kwa wadudu hao. Usinyunyize kabla hawajathibitisha.",
+   "reviewed": false,
+   "sources": [
+    "https://www.globalcoffeeplatform.org/wp-content/uploads/2021/03/KCS-MANUAL-review-03112020.pdf",
+    "https://infonet-biovision.org/crops-fruits-vegetables/coffee-revised"
+   ]
+  },
+  {
+   "id": "A09",
+   "cause": "heavy_rain_damage",
+   "costsMoney": false,
+   "text": "Katika nchi tambarare, fanya vibanda au mistari mingine ambayo huhifadhi udongo, ili mvua kubwa isioshe udongo.",
+   "reviewed": false,
+   "sources": [
+    "https://www.globalcoffeeplatform.org/wp-content/uploads/2021/03/KCS-MANUAL-review-03112020.pdf"
+   ]
+  },
+  {
+   "id": "A10",
+   "cause": "heavy_rain_damage",
+   "costsMoney": false,
+   "text": "Baada ya mvua kubwa, angalia ikiwa majani yako ni magugu. Punda ili hewa iweze kusafiri kupitia miti.",
+   "reviewed": false,
+   "sources": [
+    "https://infonet-biovision.org/crops-fruits-vegetables/coffee-revised",
+    "https://www.frontiersin.org/journals/climate/articles/10.3389/fclim.2025.1699037/full"
+   ]
+  },
+  {
+   "id": "A11",
+   "cause": "drought_at_flowering",
+   "costsMoney": false,
+   "text": "Weka mulch kwenye udongo chini ya miti yako ili kuhifadhi maji. Weka mulch mbali na shina.",
+   "reviewed": false,
+   "sources": [
+    "https://www.globalcoffeeplatform.org/wp-content/uploads/2021/03/KCS-MANUAL-review-03112020.pdf",
+    "https://www.frontiersin.org/journals/climate/articles/10.3389/fclim.2025.1699037/full"
+   ]
+  },
+  {
+   "id": "A12",
+   "cause": "drought_at_flowering",
+   "costsMoney": false,
+   "text": "Ikiwa unaweza kunywesha miti yako, fanya hivyo wakati buds za maua zitakapokuwa tayari na mvua haijaanza.",
+   "reviewed": false,
+   "sources": [
+    "https://www.globalcoffeeplatform.org/wp-content/uploads/2021/03/KCS-MANUAL-review-03112020.pdf"
+   ]
+  },
+  {
+   "id": "A13",
+   "cause": "drought_at_flowering",
+   "costsMoney": false,
+   "text": "Kwa ajili ya kupanda tena, uliza kampuni yako kuhusu aina za kahawa zinazoweza kukabiliana vizuri na hali ya hewa kali.",
+   "reviewed": false,
+   "sources": [
+    "https://www.globalcoffeeplatform.org/wp-content/uploads/2021/03/KCS-MANUAL-review-03112020.pdf"
+   ]
+  },
+  {
+   "id": "A14",
+   "cause": "soil_acidity_or_nutrient",
+   "costsMoney": false,
+   "text": "Jaribu udongo wako kila baada ya miaka miwili hadi mitatu. Amua tu ununue nini baada ya kuona matokeo.",
+   "reviewed": false,
+   "sources": [
+    "https://www.globalcoffeeplatform.org/wp-content/uploads/2021/03/KCS-MANUAL-review-03112020.pdf",
+    "https://kenyacoffeeschool.golearn.co.ke/kcs-coffee-agronomy-2b-soil-science-and-soil-fertility/83821/uncategorized/bep3zc5cbf/"
+   ]
+  },
+  {
+   "id": "A15",
+   "cause": "soil_acidity_or_nutrient",
+   "costsMoney": true,
+   "text": "Weka lime kwenye udongo tu kama vile ripoti ya mtihani wa udongo inavyosema. Uliza afisa ugani ni kiasi gani.",
+   "reviewed": false,
+   "sources": [
+    "https://www.globalcoffeeplatform.org/wp-content/uploads/2021/03/KCS-MANUAL-review-03112020.pdf",
+    "https://kenyacoffeeschool.golearn.co.ke/kcs-coffee-agronomy-2b-soil-science-and-soil-fertility/83821/uncategorized/bep3zc5cbf/"
+   ]
+  },
+  {
+   "id": "A16",
+   "cause": "soil_acidity_or_nutrient",
+   "costsMoney": true,
+   "text": "Usinunue mbolea ya phosphate isipokuwa mtihani wa udongo ukisema hivyo. Mbolea isiyofaa inaweza kutoa cherries kubwa bila maharagwe.",
+   "reviewed": false,
+   "sources": [
+    "https://www.globalcoffeeplatform.org/wp-content/uploads/2021/03/KCS-MANUAL-review-03112020.pdf"
+   ]
+  },
+  {
+   "id": "A17",
+   "cause": "old_trees_need_stumping",
+   "costsMoney": false,
+   "text": "Kukata mashina ya zamani hadi kisiki huruhusu mashina mapya kukua. Inashauriwa baada ya mavuno makubwa matano hivi. Muulize afisa ugani kwanza.",
+   "reviewed": false,
+   "sources": [
+    "https://www.globalcoffeeplatform.org/wp-content/uploads/2021/03/KCS-MANUAL-review-03112020.pdf"
+   ]
+  },
+  {
+   "id": "A18",
+   "cause": "old_trees_need_stumping",
+   "costsMoney": false,
+   "text": "Usitumbukie miti wakati wa kiangazi. Miti inahitaji mvua ili kukua shina mpya.",
+   "reviewed": false,
+   "sources": [
+    "https://www3.ctahr.hawaii.edu/oc/freepubs/pdf/PD-126.pdf"
+   ]
+  },
+  {
+   "id": "A19",
+   "cause": "old_trees_need_stumping",
+   "costsMoney": false,
+   "text": "Mwulize afisa ugani kuhusu kazi ya juu au kupanda tena miti ya zamani na kahawa isiyoweza kudhibiti magonjwa.",
+   "reviewed": false,
+   "sources": [
+    "https://www.globalcoffeeplatform.org/wp-content/uploads/2021/03/KCS-MANUAL-review-03112020.pdf",
+    "https://infonet-biovision.org/crops-fruits-vegetables/coffee-revised"
+   ]
+  },
+  {
+   "id": "A20",
+   "cause": "normal_off_year",
+   "costsMoney": false,
+   "text": "Mavuno makubwa sana katika msimu uliopita yanaweza kufanya msimu huu uwe mdogo. Sehemu fulani ya kushuka hii inaweza kuwa ya kawaida.",
+   "reviewed": false,
+   "sources": [
+    "https://www.eurekalert.org/news-releases/793119",
+    "https://www.globalcoffeeplatform.org/wp-content/uploads/2021/03/KCS-MANUAL-review-03112020.pdf"
+   ]
+  },
+  {
+   "id": "A21",
+   "cause": "normal_off_year",
+   "costsMoney": false,
+   "text": "Usinunue dawa au mbolea kwa sababu tu mavuno ni madogo. Subiri mtihani wa udongo au ushauri kutoka kwa mtu.",
+   "reviewed": false,
+   "sources": [
+    "https://www.globalcoffeeplatform.org/wp-content/uploads/2021/03/KCS-MANUAL-review-03112020.pdf"
+   ]
+  },
+  {
+   "id": "A22",
+   "cause": "normal_off_year",
+   "costsMoney": false,
+   "text": "Ili kulinda msimu ujao, panya ili ufungue miti. Jaribu udongo wako, kisha uchague mbolea pamoja na afisa ugani.",
+   "reviewed": false,
+   "sources": [
+    "https://www.globalcoffeeplatform.org/wp-content/uploads/2021/03/KCS-MANUAL-review-03112020.pdf"
+   ]
+  },
+  {
+   "id": "A23",
+   "cause": "unknown",
+   "costsMoney": false,
+   "text": "Siwezi kujua sababu bado. Mwombe afisa ugani atembelee na kuchunguza majani, matunda, udongo na mizizi.",
+   "reviewed": false,
+   "sources": [
+    "https://www.globalcoffeeplatform.org/wp-content/uploads/2021/03/KCS-MANUAL-review-03112020.pdf"
+   ]
+  },
+  {
+   "id": "A24",
+   "cause": "any",
+   "costsMoney": false,
+   "text": "Sina uhakika. Mtu atakusaidia. Tuma SMS kisha subiri jibu kabla ya kutumia pesa.",
+   "reviewed": false,
+   "sources": []
+  }
+ ],
+ "strings": {
+  "Q01": "Je, mavuno yako ya mwaka uliopita yalikuwa makubwa sana?",
+  "Q02": "Je, maua yalianguka mapema, au hayakuzaa matunda?",
+  "Q03": "Je, unaona mdudu huyu kwenye miti yako?",
+  "Q04": "Je, matunda fulani yana mashimo madogo?",
+  "Q05": "Je, miti yako mingi ina umri wa zaidi ya miaka 20?",
+  "Q06": "Je, tatizo liko kwenye shamba zima? Ndiyo ni shamba zima. Hapana ni eneo moja tu.",
+  "Q07": "Weka majani 5 kutoka safu mbaya zaidi katika mfuko.",
+  "Q08": "Sasa weka majani 5 kutoka kwenye safu nzuri katika mfuko.",
+  "Q09": "Piga picha wazi ya kila jani kwenye kitambaa chenye giza.",
+  "Q10": "Sema jibu lako, au bonyeza kitufe.",
+  "C01": "Je, unakubali kutumia huduma hii? Sema ndiyo au hapana.",
+  "C02": "Je, ninaweza kushiriki rekodi yako ya shamba na ushirika wako? Sema ndiyo au hapana.",
+  "C03": "Je, tunaweza kutumia picha zako kuboresha chombo? Sema ndiyo au hapana.",
+  "yes": "Ndiyo",
+  "no": "Hapana",
+  "unsure": "Sina uhakika",
+  "next": "Endelea",
+  "back": "Rudi",
+  "start": "Anza",
+  "take_photo": "Piga picha",
+  "worst_row": "Safu mbaya zaidi",
+  "good_row": "Safu nzuri",
+  "play_audio": "Sikiliza",
+  "result_title": "Kinachoweza kuwa tatizo",
+  "not_sure_title": "Sina uhakika — ninamtumia mtu kesi hii",
+  "not_sure_body": "Siwezi kutoa jibu salama. Tuma SMS. Afisa ugani atajibu. Usinunue chochote bado.",
+  "send_sms": "Tuma SMS",
+  "evidence_used": "Nilichokuwa nikitumia",
+  "what_i_could_not_check": "Nisichoweza kukagua",
+  "machine_drafted_notice": "Tafsiri ya mashine — haijakaguliwa na mzungumzaji asilia",
+  "cannot_read_title": "Siwezi kusoma jani hili",
+  "cannot_read_body": "Siwezi kusoma jani hili — huenda si kahawa, au huenda ni kitu ambacho sikijui. Piga picha tena au litume kwa mtu.",
+  "retake": "Piga picha tena",
+  "send_person": "Tuma kwa mtu",
+  "area_title": "Shamba liko wapi?",
+  "use_my_location": "Tumia eneo langu",
+  "use_demo_area": "Tumia eneo la maonyesho (Mutira, Kirinyaga)",
+  "area_none": "Bado hakuna eneo lililochaguliwa. Mvua na udongo hazitachunguzwa.",
+  "area_locating": "Kupata eneo lako...",
+  "area_gps": "Mahali yako ({lat}, {lon}), ndani ya ramani ya Kirinyaga.",
+  "area_failed": "Sikuweza kupata eneo lako. Chagua eneo la onyesho, au jaribu tena.",
+  "area_outside": "Mahali pako ni nje ya ramani ya Kirinyaga Nina data kwa ajili ya. Chagua eneo la maonyesho.",
+  "asof_label": "Data mvua hadi",
+  "asof_latest": "Latest ({date})",
+  "asof_note": "Chagua tarehe ya mapema ili uone mvua ilikuwaje wakati huo.",
+  "asof_demo_btn": "Demo: baada ya mvua kubwa ya Aprili 2026",
+  "rain_asof": "Data ya mvua hadi {date}.",
+  "rain_caption": "Siku nzito zaidi katika siku 90 zilizopita: {mm} mm (takwimu za satelaiti za ~ 5 km, zinaweza kutofautiana kwenye mteremko wako)",
+  "ev.contrast_low": "Majani ya safu mbaya zaidi na safu nzuri yanaonekana karibu sawa.",
+  "ev.contrast:high": "Majani ya mstari mbaya zaidi yanaonekana kuwa magonjwa zaidi kuliko majani ya mstari mzuri.",
+  "ev.leaf:rust_high": "Majani ya mstari mbaya zaidi yanaonyesha dalili za kutu ya majani.",
+  "ev.leaf:rust_low": "Majani yanaonyesha dalili kidogo za kutu ya majani.",
+  "ev.leaf:other_disease_high": "Majani yana matangazo ya ugonjwa mwingine wa majani.",
+  "ev.leaf:other_disease_low": "Majani hayana madoa mengi kutokana na magonjwa mengine ya majani.",
+  "ev.leaf:miner_high": "Majani yanaonyesha mifereji iliyofanywa na wadudu wa kuchimba majani.",
+  "ev.leaf:healthy_high": "Majani yanaonekana kuwa yenye afya.",
+  "ev.rain_very_wet_90d": "Mvua kubwa ilianguka siku 6 au zaidi katika siku 90 zilizopita.",
+  "ev.rain_none_90d": "Hakuna siku za mvua kali katika siku 90 zilizopita.",
+  "ev.flowering_dry_strong": "Mvua wakati wa maua ilikuwa chini sana kuliko kawaida.",
+  "ev.flowering_dry_mild": "Mvua wakati wa maua ilikuwa chini kidogo kuliko kawaida.",
+  "ev.flowering_normal": "Mvua wakati wa maua ilikuwa ya kawaida.",
+  "ev.ph_low_strong": "Udongo ni wenye asidi sana.",
+  "ev.ph_low_mild": "Udongo ni wenye asidi kidogo.",
+  "ev.ph_ok": "Asidi ya udongo ni nzuri kwa ajili ya kahawa.",
+  "ev.ph_high": "Udongo hauna asidi. Huenda ikafunga chakula kwa ajili ya miti.",
+  "ev.lastSeasonHeavy_1": "Ulisema mavuno ya msimu uliopita yalikuwa makubwa sana.",
+  "ev.lastSeasonHeavy_0": "Ulisema mavuno ya msimu uliopita hayakuwa makubwa sana.",
+  "ev.flowersDropped_1": "Ulisema maua yalianguka mapema au hayakuzaa matunda.",
+  "ev.flowersDropped_0": "Ulisema maua hayakuanguka mapema.",
+  "ev.bugSeen_1": "Ulisema unaona mdudu huyu kwenye miti yako.",
+  "ev.bugSeen_0": "Ulisema huoni mdudu huyu.",
+  "ev.berryHoles_1": "Ulisema baadhi ya berries kuwa na mashimo madogo.",
+  "ev.berryHoles_0": "Ulisema matunda hayana mashimo madogo.",
+  "ev.treeAgeOver20_1": "Ulisema miti mingi ina umri wa miaka zaidi ya 20.",
+  "ev.treeAgeOver20_0": "Ulisema miti mingi ni chini ya miaka 20.",
+  "ev.wholeFarm_1": "Ulisema tatizo ni katika shamba nzima.",
+  "ev.wholeFarm_0": "Ulisema tatizo ni katika eneo moja tu.",
+  "nc.roots": "Sikuweza kuangalia mizizi.",
+  "nc.no_plot_data": "Sina data ya mvua au udongo kwa eneo lako.",
+  "nc.leaf": "Sikuweza kusoma majani.",
+  "ab.photo_unusable": "Sikuweza kutumia picha za majani.",
+  "ab.vision_low_conf": "Picha hazikuwa wazi vya kutosha ili niwe na uhakika.",
+  "ab.top_cause_low": "Hakuna sababu moja tu inayoonekana.",
+  "ab.top_two_close": "Sababu mbili zinaonekana kuwa na uwezekano sawa.",
+  "ab.answers_contradict": "Majibu yako na picha za majani hayakubaliani.",
+  "ab.top_is_unknown": "Jibu linalowezekana zaidi ni jambo ambalo sijui.",
+  "ab.money_needs_high_conf": "Sina uhakika wa kutosha wa kukushauri utumie pesa."
+ },
+ "manualEdits": {
+  "ids": [
+   "A05",
+   "A17",
+   "A24",
+   "Q06",
+   "not_sure_title",
+   "not_sure_body",
+   "next",
+   "back",
+   "start",
+   "play_audio",
+   "worst_row",
+   "good_row",
+   "no",
+   "unsure",
+   "result_title",
+   "send_sms",
+   "what_i_could_not_check",
+   "cannot_read_title",
+   "cannot_read_body",
+   "retake",
+   "area_title",
+   "ab.photo_unusable",
+   "ab.answers_contradict",
+   "ev.contrast_low",
+   "ab.vision_low_conf",
+   "ab.money_needs_high_conf",
+   "machine_drafted_notice"
+  ],
+  "by": "Claude (non-native)",
+  "reason": "fix mistranslations flagged by back-translation QA (sw_qa.json), e.g. A05 'sick leaves' became 'patients papers'; 'extension officer' -> 'afisa ugani'",
+  "status": "unreviewed"
+ },
+ "machineAddedKeys": [
+  "ab.answers_contradict",
+  "ab.money_needs_high_conf",
+  "ab.photo_unusable",
+  "ab.top_cause_low",
+  "ab.top_is_unknown",
+  "ab.top_two_close",
+  "ab.vision_low_conf",
+  "area_failed",
+  "area_gps",
+  "area_locating",
+  "area_none",
+  "area_outside",
+  "area_title",
+  "asof_demo_btn",
+  "asof_label",
+  "asof_latest",
+  "asof_note",
+  "cannot_read_body",
+  "cannot_read_title",
+  "ev.berryHoles_0",
+  "ev.berryHoles_1",
+  "ev.bugSeen_0",
+  "ev.bugSeen_1",
+  "ev.contrast:high",
+  "ev.contrast_low",
+  "ev.flowering_dry_mild",
+  "ev.flowering_dry_strong",
+  "ev.flowering_normal",
+  "ev.flowersDropped_0",
+  "ev.flowersDropped_1",
+  "ev.lastSeasonHeavy_0",
+  "ev.lastSeasonHeavy_1",
+  "ev.leaf:healthy_high",
+  "ev.leaf:miner_high",
+  "ev.leaf:other_disease_high",
+  "ev.leaf:other_disease_low",
+  "ev.leaf:rust_high",
+  "ev.leaf:rust_low",
+  "ev.ph_high",
+  "ev.ph_low_mild",
+  "ev.ph_low_strong",
+  "ev.ph_ok",
+  "ev.rain_none_90d",
+  "ev.rain_very_wet_90d",
+  "ev.treeAgeOver20_0",
+  "ev.treeAgeOver20_1",
+  "ev.wholeFarm_0",
+  "ev.wholeFarm_1",
+  "nc.leaf",
+  "nc.no_plot_data",
+  "nc.roots",
+  "rain_asof",
+  "rain_caption",
+  "retake",
+  "send_person",
+  "use_demo_area",
+  "use_my_location"
+ ],
+ "machineAddedKeys_note": "Keys in machineAddedKeys were added by ml/translate_missing.py (NLLB-200). Some were then hand-fixed by Claude (non-native), those ids are also in manualEdits.ids. Nothing is human-reviewed."
+}

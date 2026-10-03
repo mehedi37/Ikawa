@@ -1,0 +1,17 @@
+{
+  "id": "mdmehedihasanmaruf/ikawa-data-prep",
+  "title": "ikawa-data-prep",
+  "code_file": "prepare_data.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": "true",
+  "enable_gpu": "false",
+  "enable_internet": "true",
+  "dataset_sources": [
+    "mdmehedihasanmaruf/ikawa-bracol",
+    "nirmalsankalana/rocole-a-robusta-coffee-leaf-images-dataset",
+    "abdallahalidev/plantvillage-dataset"
+  ],
+  "competition_sources": ["cassava-leaf-disease-classification"],
+  "kernel_sources": []
+}

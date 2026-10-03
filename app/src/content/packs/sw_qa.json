@@ -1,0 +1,434 @@
+[
+ {
+  "id": "A01",
+  "original": "Prune your trees so air and light reach the leaves. This helps leaves dry and slows leaf rust.",
+  "swahili": "Punguza miti yako ili hewa na nuru ifike kwenye majani. Hilo husaidia majani kukauka na kupunguza kasi ya kutu ya majani.",
+  "back_translation": "Cut down your trees so that air and light can reach the leaves. This helps the leaves to dry and reduces the rate of decay.",
+  "score": 0.649,
+  "flag": false
+ },
+ {
+  "id": "A02",
+  "original": "Ask the extension officer which treatment is approved for leaf rust and when to apply it. Use only what they advise.",
+  "swahili": "Uulize afisa wa upanuzi ni matibabu gani yanayokubaliwa kwa ajili ya kutu ya majani na wakati wa kuitumia. Tumia tu yale wanayowashauri.",
+  "back_translation": "Ask the extension officer what treatment is acceptable for leaf rust and when to use it. Just follow their advice.",
+  "score": 0.732,
+  "flag": false
+ },
+ {
+  "id": "A03",
+  "original": "When you replace trees, ask the extension officer about coffee varieties that resist leaf rust.",
+  "swahili": "Unapobadilisha miti, muulize afisa wa kupanua juu ya aina za kahawa zinazoweza kupinga kutu ya majani.",
+  "back_translation": "When replacing trees, ask an expansion officer about the types of coffee that can resist decay.",
+  "score": 0.581,
+  "flag": false
+ },
+ {
+  "id": "A04",
+  "original": "Prune and remove extra shoots on time. Open trees let air in and make leaf disease less likely.",
+  "swahili": "Punguza na uondoe miche ya ziada kwa wakati unaofaa. Miti iliyo wazi huingiza hewa na kufanya uwezekano wa kupatwa na magonjwa ya majani ukuwe mdogo.",
+  "back_translation": "Reduce and remove extra seedlings in a timely manner. Open trees absorb air and reduce the likelihood of leaf disease.",
+  "score": 0.514,
+  "flag": false
+ },
+ {
+  "id": "A05",
+  "original": "Show the sick leaves to the extension officer before you buy any spray. Different leaf diseases need different action.",
+  "swahili": "Mwonyeshe afisa wa upanuzi karatasi za wagonjwa kabla ya kununua dawa yoyote. Magonjwa mbalimbali ya majani yanahitaji hatua tofauti.",
+  "back_translation": "Show the extension officer the patient's medical records before buying any medicine. Different diseases of grasses require different treatments.",
+  "score": 0.457,
+  "flag": true
+ },
+ {
+  "id": "A06",
+  "original": "Pick all ripe berries and collect fallen berries. Remove berries with small holes. This slows the spread of the pest.",
+  "swahili": "Pokea matunda yote yaliyokomaa na kukusanya matunda yaliyoanguka. Ondoa matunda yenye mashimo madogo. Hilo hupunguza kasi ya kuenea kwa maradhi.",
+  "back_translation": "Pick up all the ripe fruit and pick up the fallen fruit. Remove the fruit with small holes. This slows the spread of disease.",
+  "score": 0.824,
+  "flag": false
+ },
+ {
+  "id": "A07",
+  "original": "Prune your trees and remove extra shoots. Antestia bugs like thick leaves.",
+  "swahili": "Punguza miti yako na uondoe shina za ziada. Antestia hubeba kama majani mazito.",
+  "back_translation": "Cut down your trees and remove extra stems. Antestia carries like heavy leaves.",
+  "score": 0.64,
+  "flag": false
+ },
+ {
+  "id": "A08",
+  "original": "Ask the extension officer which treatment is approved for this pest. Do not spray before they confirm.",
+  "swahili": "Uulize afisa wa upanuzi ni aina gani ya matibabu ambayo yamekubaliwa kwa wadudu hao. Usinyunyize kabla hawajathibitisha.",
+  "back_translation": "Ask the extension officer what kind of treatment has been approved for the insects. Do not spray it before they confirm it.",
+  "score": 0.703,
+  "flag": false
+ },
+ {
+  "id": "A09",
+  "original": "On steep land, make terraces or other lines that hold soil, so heavy rain does not wash the soil away.",
+  "swahili": "Katika nchi tambarare, fanya vibanda au mistari mingine ambayo huhifadhi udongo, ili mvua kubwa isioshe udongo.",
+  "back_translation": "In plains, make shelters or other rows to keep the soil in place, so that heavy rain does not wash the soil.",
+  "score": 0.632,
+  "flag": false
+ },
+ {
+  "id": "A10",
+  "original": "After heavy rain, check your leaves for rust. Prune so that air can move through the trees.",
+  "swahili": "Baada ya mvua kubwa, angalia ikiwa majani yako ni magugu. Punda ili hewa iweze kusafiri kupitia miti.",
+  "back_translation": "After heavy rain, check if your leaves are weeds. A donkey so that the air can travel through the trees.",
+  "score": 0.722,
+  "flag": false
+ },
+ {
+  "id": "A11",
+  "original": "Put mulch on the soil under your trees to keep water in. Keep the mulch away from the stem.",
+  "swahili": "Weka mulch kwenye udongo chini ya miti yako ili kuhifadhi maji. Weka mulch mbali na shina.",
+  "back_translation": "Keep mulch in the soil under your trees to store water. Keep the mulch away from the stem.",
+  "score": 0.897,
+  "flag": false
+ },
+ {
+  "id": "A12",
+  "original": "If you can water your trees, do it when the flower buds are ready and the rain has not come.",
+  "swahili": "Ikiwa unaweza kunywesha miti yako, fanya hivyo wakati buds za maua zitakapokuwa tayari na mvua haijaanza.",
+  "back_translation": "If you can water your trees, do so when the buds are ready and the rain has not yet begun.",
+  "score": 0.842,
+  "flag": false
+ },
+ {
+  "id": "A13",
+  "original": "For replanting, ask your cooperative about coffee varieties that handle dry weather well.",
+  "swahili": "Kwa ajili ya kupanda tena, uliza kampuni yako kuhusu aina za kahawa zinazoweza kukabiliana vizuri na hali ya hewa kali.",
+  "back_translation": "To replant, ask your company about coffee varieties that can withstand extreme weather conditions.",
+  "score": 0.519,
+  "flag": false
+ },
+ {
+  "id": "A14",
+  "original": "Test your soil every 2 to 3 years. Decide what to buy only after you see the result.",
+  "swahili": "Jaribu udongo wako kila baada ya miaka miwili hadi mitatu. Amua tu ununue nini baada ya kuona matokeo.",
+  "back_translation": "Test your soil every two to three years. Just decide what to buy after seeing the results.",
+  "score": 0.667,
+  "flag": true
+ },
+ {
+  "id": "A15",
+  "original": "Put lime on the soil only as the soil test report says. Ask the extension officer how much.",
+  "swahili": "Weka lime kwenye udongo tu kama vile ripoti ya mtihani wa udongo inavyosema. Uliza afisa wa upanuzi ni kiasi gani.",
+  "back_translation": "Keep the lime only in the soil, as the soil test report suggests. Ask the expansion officer how much.",
+  "score": 0.733,
+  "flag": false
+ },
+ {
+  "id": "A16",
+  "original": "Do not buy phosphate fertiliser unless the soil test advises it. The wrong fertiliser can give big cherries with no beans.",
+  "swahili": "Usinunue mbolea ya phosphate isipokuwa mtihani wa udongo ukisema hivyo. Mbolea isiyofaa inaweza kutoa cherries kubwa bila maharagwe.",
+  "back_translation": "Do not buy phosphate fertilizer unless the soil test says so. Bad fertilizers can produce large cherries without beans.",
+  "score": 0.579,
+  "flag": false
+ },
+ {
+  "id": "A17",
+  "original": "Cutting old stems back to a stump lets new stems grow. It is advised after about 5 big harvests. Ask the extension officer first.",
+  "swahili": "Kukata mizizi ya zamani na kuirudisha kwenye shina husaidia mizizi mipya kukua. Inashauriwa kufanya hivyo baada ya mavuno matano makubwa. Uliza afisa wa upanuzi kwanza.",
+  "back_translation": "Cutting out old roots and putting them back on the stems helps new roots to grow. It is advisable to do so after five major harvests. Ask the expansion officer first.",
+  "score": 0.588,
+  "flag": true
+ },
+ {
+  "id": "A18",
+  "original": "Do not stump trees during a dry spell. The trees need rain to grow new shoots.",
+  "swahili": "Usitumbukie miti wakati wa kiangazi. Miti inahitaji mvua ili kukua shina mpya.",
+  "back_translation": "Don't fall on trees in the summer. Trees need rain to grow new shoots.",
+  "score": 0.552,
+  "flag": false
+ },
+ {
+  "id": "A19",
+  "original": "Ask the extension officer about top-working or replanting old trees with disease-resistant coffee.",
+  "swahili": "Mwulize afisa wa upanuzi kuhusu kazi ya juu au kupanda tena miti ya zamani na kahawa isiyoweza kudhibiti magonjwa.",
+  "back_translation": "Ask the expansion officer about a high-level job or replanting old trees and uncontrollable coffee.",
+  "score": 0.581,
+  "flag": false
+ },
+ {
+  "id": "A20",
+  "original": "A very big harvest last season can make this season smaller. Part of this drop can be normal.",
+  "swahili": "Mavuno makubwa sana katika msimu uliopita yanaweza kufanya msimu huu uwe mdogo. Sehemu fulani ya kushuka hii inaweza kuwa ya kawaida.",
+  "back_translation": "Too much harvest in the previous season can make this season short. Some of this decline may be normal.",
+  "score": 0.5,
+  "flag": false
+ },
+ {
+  "id": "A21",
+  "original": "Do not buy spray or fertiliser only because the harvest is smaller. Wait for a soil test or advice from a person.",
+  "swahili": "Usinunue dawa au mbolea kwa sababu tu mavuno ni madogo. Subiri mtihani wa udongo au ushauri kutoka kwa mtu.",
+  "back_translation": "Do not buy medicines or fertilizers just because the harvest is small. Wait for a soil test or advice from someone.",
+  "score": 0.75,
+  "flag": false
+ },
+ {
+  "id": "A22",
+  "original": "To protect next season, prune to open the trees. Test your soil, then choose fertiliser with the extension officer.",
+  "swahili": "Ili kulinda msimu ujao, panya ili ufungue miti. Jaribu udongo wako, kisha uchague mbolea pamoja na afisa wa upanuzi.",
+  "back_translation": "To protect the next season, mouse to cut down trees. Test your soil, then choose fertilizer with the expansion officer.",
+  "score": 0.743,
+  "flag": false
+ },
+ {
+  "id": "A23",
+  "original": "I cannot tell the cause yet. Ask the extension officer to visit and check the leaves, berries, soil and roots.",
+  "swahili": "Siwezi kujua sababu bado. Mwombe afisa wa upanuzi atembelee na kuchunguza majani, matunda, udongo na mizizi.",
+  "back_translation": "I can't figure out why yet. Ask the expansion officer to visit and examine the leaves, fruits, soil, and roots.",
+  "score": 0.611,
+  "flag": false
+ },
+ {
+  "id": "A24",
+  "original": "I am not sure. A person will help you. Send the SMS and wait for the answer before you spend money.",
+  "swahili": "Sijui. Mtu fulani atakusaidia. Tuma ujumbe na usubiri jibu kabla ya kutumia pesa.",
+  "back_translation": "I don't know. Someone will help you. Send a message and wait for a reply before spending money.",
+  "score": 0.595,
+  "flag": true
+ },
+ {
+  "id": "Q01",
+  "original": "Was your harvest last season unusually big?",
+  "swahili": "Je, mavuno yako ya mwaka uliopita yalikuwa makubwa sana?",
+  "back_translation": "Was your harvest last year too great?",
+  "score": 0.571,
+  "flag": false
+ },
+ {
+  "id": "Q02",
+  "original": "Did the flowers drop early, or fail to make fruit?",
+  "swahili": "Je, maua yalianguka mapema, au hayakuzaa matunda?",
+  "back_translation": "Did the flowers fall early, or did they not bear fruit?",
+  "score": 0.6,
+  "flag": false
+ },
+ {
+  "id": "Q03",
+  "original": "Do you see this bug on your trees?",
+  "swahili": "Je, unaona mdudu huyu kwenye miti yako?",
+  "back_translation": "Do you see this insect on your trees?",
+  "score": 0.875,
+  "flag": false
+ },
+ {
+  "id": "Q04",
+  "original": "Do some berries have small holes?",
+  "swahili": "Je, matunda fulani yana mashimo madogo?",
+  "back_translation": "Do some fruits have small holes?",
+  "score": 0.833,
+  "flag": false
+ },
+ {
+  "id": "Q05",
+  "original": "Are most of your trees older than 20 years?",
+  "swahili": "Je, miti yako mingi ina umri wa zaidi ya miaka 20?",
+  "back_translation": "Are most of your trees over 20 years old?",
+  "score": 0.778,
+  "flag": false
+ },
+ {
+  "id": "Q06",
+  "original": "Is the problem on the whole farm? Yes means the whole farm. No means only one area.",
+  "swahili": "Je, tatizo liko kwenye shamba lote? Ndiyo maana mashamba yote. Hakuna maana ni eneo moja tu.",
+  "back_translation": "Is the problem all over the field? That is the meaning of all fields. It doesn't mean it's just one area.",
+  "score": 0.333,
+  "flag": true
+ },
+ {
+  "id": "Q07",
+  "original": "Put 5 leaves from the WORST row in the bag.",
+  "swahili": "Weka majani 5 kutoka safu mbaya zaidi katika mfuko.",
+  "back_translation": "Put 5 leaves from the worst row in the bag.",
+  "score": 1.0,
+  "flag": false
+ },
+ {
+  "id": "Q08",
+  "original": "Now put 5 leaves from a GOOD row in the bag.",
+  "swahili": "Sasa weka majani 5 kutoka kwenye safu nzuri katika mfuko.",
+  "back_translation": "Now put 5 leaves from a good row in a bag.",
+  "score": 0.952,
+  "flag": false
+ },
+ {
+  "id": "Q09",
+  "original": "Take a clear photo of each leaf on a dark cloth.",
+  "swahili": "Piga picha wazi ya kila jani kwenye kitambaa chenye giza.",
+  "back_translation": "Draw a clear picture of each leaf on a dark cloth.",
+  "score": 0.8,
+  "flag": false
+ },
+ {
+  "id": "Q10",
+  "original": "Say your answer, or tap a button.",
+  "swahili": "Sema jibu lako, au bonyeza kitufe.",
+  "back_translation": "Give your answer, or press a button.",
+  "score": 0.714,
+  "flag": false
+ },
+ {
+  "id": "C01",
+  "original": "Do you agree to use this service? Say yes or no.",
+  "swahili": "Je, unakubali kutumia huduma hii? Sema ndiyo au hapana.",
+  "back_translation": "Do you agree to use this service? Say yes or no.",
+  "score": 1.0,
+  "flag": false
+ },
+ {
+  "id": "C02",
+  "original": "Can I share your farm record with your cooperative? Say yes or no.",
+  "swahili": "Je, ninaweza kushiriki rekodi yako ya shamba na ushirika wako? Sema ndiyo au hapana.",
+  "back_translation": "Can I share your farm record with your company? Say yes or no.",
+  "score": 0.917,
+  "flag": false
+ },
+ {
+  "id": "C03",
+  "original": "Can we use your photos to improve the tool? Say yes or no.",
+  "swahili": "Je, tunaweza kutumia picha zako kuboresha chombo? Sema ndiyo au hapana.",
+  "back_translation": "Can we use your pictures to improve the tool? Say yes or no.",
+  "score": 0.923,
+  "flag": false
+ },
+ {
+  "id": "yes",
+  "original": "Yes",
+  "swahili": "Ndiyo",
+  "back_translation": "Yes, it is",
+  "score": 0.5,
+  "flag": false
+ },
+ {
+  "id": "no",
+  "original": "No",
+  "swahili": "La, sivyo",
+  "back_translation": "No, it is not",
+  "score": 0.4,
+  "flag": true
+ },
+ {
+  "id": "unsure",
+  "original": "Not sure",
+  "swahili": "Sijui",
+  "back_translation": "I don't know",
+  "score": 0.0,
+  "flag": true
+ },
+ {
+  "id": "next",
+  "original": "Next",
+  "swahili": "Yafuatayo",
+  "back_translation": "The Following",
+  "score": 0.0,
+  "flag": true
+ },
+ {
+  "id": "back",
+  "original": "Back",
+  "swahili": "Kurudi",
+  "back_translation": "The Return",
+  "score": 0.0,
+  "flag": true
+ },
+ {
+  "id": "start",
+  "original": "Start",
+  "swahili": "Kuanza",
+  "back_translation": "The Beginning",
+  "score": 0.0,
+  "flag": true
+ },
+ {
+  "id": "take_photo",
+  "original": "Take photo",
+  "swahili": "Piga picha",
+  "back_translation": "Take a photo",
+  "score": 0.8,
+  "flag": false
+ },
+ {
+  "id": "worst_row",
+  "original": "Worst row",
+  "swahili": "Mstari mbaya zaidi",
+  "back_translation": "The worst line",
+  "score": 0.4,
+  "flag": true
+ },
+ {
+  "id": "good_row",
+  "original": "Good row",
+  "swahili": "Mstari mzuri",
+  "back_translation": "A good line",
+  "score": 0.4,
+  "flag": true
+ },
+ {
+  "id": "play_audio",
+  "original": "Play audio",
+  "swahili": "Kucheza sauti",
+  "back_translation": "Playing vocals",
+  "score": 0.0,
+  "flag": true
+ },
+ {
+  "id": "result_title",
+  "original": "What may be happening",
+  "swahili": "Ni nini kinachoweza kutokea",
+  "back_translation": "What could happen",
+  "score": 0.286,
+  "flag": true
+ },
+ {
+  "id": "not_sure_title",
+  "original": "Not sure — I am sending this to a person",
+  "swahili": "Sijui  Mimi ni kutuma hii kwa mtu",
+  "back_translation": "I don't know I'm sending this to someone",
+  "score": 0.444,
+  "flag": true
+ },
+ {
+  "id": "not_sure_body",
+  "original": "I cannot give a safe answer. Send the SMS. An extension officer will reply. Do not buy anything yet.",
+  "swahili": "Siwezi kutoa jibu salama. Tuma ujumbe. Afisa wa upanuzi atajibu. Usinunue chochote bado.",
+  "back_translation": "I cannot give a sure answer. Send a message. The expansion officer will answer. Don't buy anything yet.",
+  "score": 0.667,
+  "flag": true
+ },
+ {
+  "id": "send_sms",
+  "original": "Send SMS",
+  "swahili": "Kutuma SMS",
+  "back_translation": "Sending a text message",
+  "score": 0.0,
+  "flag": true
+ },
+ {
+  "id": "evidence_used",
+  "original": "What I used",
+  "swahili": "Nilichokuwa nikitumia",
+  "back_translation": "What I was using",
+  "score": 0.571,
+  "flag": false
+ },
+ {
+  "id": "what_i_could_not_check",
+  "original": "What I could not check",
+  "swahili": "Mambo ambayo sikuweza kuangalia",
+  "back_translation": "Things I couldn't look at",
+  "score": 0.182,
+  "flag": true
+ },
+ {
+  "id": "machine_drafted_notice",
+  "original": "Machine-drafted translation — not yet checked by a native speaker",
+  "swahili": "Tafsiri iliyochorwa kwa mashine  haijachunguzwa na mzungumzaji wa asili",
+  "back_translation": "The machine-painted translation has not been examined by a native speaker",
+  "score": 0.636,
+  "flag": false
+ }
+]
