@@ -23,3 +23,6 @@ data/interim/
 !app/public/model/*.onnx
 runs/
 checkpoints/
+
+# Private working files (video scripts, planning, the "Official Use Only" brief) — never published
+private/
