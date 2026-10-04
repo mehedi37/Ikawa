@@ -20,7 +20,7 @@ test('all-healthy leaves -> "Your leaves look healthy", no money card, SMS still
   for (const h of await page.getByRole('button', { name: /Yes/ }).all()) await h.click()
   await page.getByRole('button', { name: 'Next' }).click()
   await page.getByRole('button', { name: /Skip/ }).click()
-  const inputs = page.locator('input[type=file]')
+  const inputs = page.locator('input[type=file][data-src=camera]')
   for (const f of WORST) await inputs.nth(0).setInputFiles(f)
   for (const f of GOOD) await inputs.nth(1).setInputFiles(f)
   await expect(page.locator('.thumb')).toHaveCount(10, { timeout: 90_000 })

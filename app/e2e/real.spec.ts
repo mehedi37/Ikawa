@@ -13,7 +13,7 @@ async function run(page: Page, worst: string[], good: string[]) {
   await page.getByRole('button', { name: 'Next' }).click()
   await expect(page.getByRole('heading', { name: 'Voice setup' })).toBeVisible()
   await page.getByRole('button', { name: /Skip/ }).click()
-  const inputs = page.locator('input[type=file]')
+  const inputs = page.locator('input[type=file][data-src=camera]')
   for (const f of worst) await inputs.nth(0).setInputFiles(f)
   for (const f of good) await inputs.nth(1).setInputFiles(f)
   await expect(page.locator('.thumb')).toHaveCount(worst.length + good.length, { timeout: 60_000 })

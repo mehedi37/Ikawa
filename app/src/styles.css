@@ -220,3 +220,5 @@ main, .card { overflow-wrap: anywhere; }
 .btn.sel, .btn.ghost.sel { background: var(--canopy); color: var(--on-canopy); border-color: var(--canopy); }
 .verdict.cherry .pict.cherry { background: var(--paper); }
 .field.pin::placeholder { letter-spacing: normal; }
+.pair-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
+.pair-row .btn { margin: 0; padding: 10px 8px; font-size: 1rem; flex-direction: column; gap: 4px; min-height: 76px; }

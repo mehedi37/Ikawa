@@ -344,7 +344,8 @@
   "healthy_title": "Majani yako yanaonekana kuwa yenye afya",
   "healthy_body": "Huenda sababu si ugonjwa wa majani. Huenda ikawa mvua, udongo, miti ya zamani, au majira ya kawaida. Siwezi kusema ambayo kutoka hapa.",
   "send_anyway": "Kutuma kwa mtu hata hivyo",
-  "consent_photos_note": "(Haitumiwi bado: toleo hili halihifadhi picha.)"
+  "consent_photos_note": "(Haitumiwi bado: toleo hili halihifadhi picha.)",
+  "choose_photo": "Chagua kutoka kwenye simu"
  },
  "manualEdits": {
   "ids": [
@@ -374,7 +375,8 @@
    "ev.contrast_low",
    "ab.vision_low_conf",
    "ab.money_needs_high_conf",
-   "machine_drafted_notice"
+   "machine_drafted_notice",
+   "choose_photo"
   ],
   "by": "Claude (non-native)",
   "reason": "fix mistranslations flagged by back-translation QA (sw_qa.json), e.g. A05 'sick leaves' became 'patients papers'; 'extension officer' -> 'afisa ugani'",

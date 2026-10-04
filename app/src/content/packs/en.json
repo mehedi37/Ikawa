@@ -346,6 +346,7 @@
   "healthy_title": "Your leaves look healthy",
   "healthy_body": "The cause is probably not a leaf disease. It may be rain, soil, old trees, or a normal off-year. I cannot tell which from here.",
   "send_anyway": "Send to a person anyway",
-  "consent_photos_note": "(Not used yet: this version keeps no photos.)"
+  "consent_photos_note": "(Not used yet: this version keeps no photos.)",
+  "choose_photo": "Choose from phone"
  }
 }

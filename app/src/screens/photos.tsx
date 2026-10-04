@@ -1,18 +1,25 @@
 import { useRef, useState } from 'preact/hooks'
-import { Camera, Loader2, X } from 'lucide-preact'
+import { Camera, Images, Loader2, X } from 'lucide-preact'
 import { go } from '../app'
 import { session, update, useSession, type Shot } from '../lib/session'
 import { processBlob } from '../lib/shots'
-import { t } from '../content/i18n'
+import { t, tOr } from '../content/i18n'
 import { MIN_LEAVES, TARGET_LEAVES } from '../lib/analyze'
 import { Btn, Screen, OptImg } from './ui'
 
 const REASON: Record<string, string> = { blurry: 'Blurry: hold still', too_dark: 'Too dark: find light', too_bright: 'Too bright: shade it' }
 
 function Bag({ title, tone, shots, onAdd, onRemove }: { title: string; tone: 'worst' | 'good'; shots: Shot[]; onAdd: (f: File) => Promise<void>; onRemove: (i: number) => void }) {
-  const ref = useRef<HTMLInputElement>(null)
+  const cam = useRef<HTMLInputElement>(null)
+  const gallery = useRef<HTMLInputElement>(null)
   const [busy, setBusy] = useState(false)
   const ok = shots.filter((s) => s.gate.ok).length
+  // Each chosen file goes through the same photo gate and model, one after another.
+  const addFiles = async (input: HTMLInputElement) => {
+    const files = Array.from(input.files ?? []); input.value = ''
+    if (!files.length) return
+    setBusy(true); try { for (const f of files) await onAdd(f) } finally { setBusy(false) }
+  }
   return (
     <section class={'bag ' + tone}>
       <div class="bag-head">
@@ -30,12 +37,17 @@ function Bag({ title, tone, shots, onAdd, onRemove }: { title: string; tone: 'wo
           ))}
         </div>
       )}
-      <input ref={ref} type="file" accept="image/*" capture="environment" hidden onChange={async (e) => {
-        const f = e.currentTarget.files?.[0]; e.currentTarget.value = ''
-        if (!f) return
-        setBusy(true); try { await onAdd(f) } finally { setBusy(false) }
-      }} />
-      <Btn kind="secondary" icon={busy ? Loader2 : Camera} disabled={busy} onClick={() => ref.current?.click()}>{busy ? 'Checking the photo…' : t('take_photo')}</Btn>
+      {/* `capture` opens the camera straight away; the second input has none, so the phone offers its gallery and files. */}
+      <input ref={cam} data-src="camera" type="file" accept="image/*" capture="environment" hidden onChange={(e) => addFiles(e.currentTarget)} />
+      <input ref={gallery} data-src="gallery" type="file" accept="image/*" multiple hidden onChange={(e) => addFiles(e.currentTarget)} />
+      {busy
+        ? <Btn kind="secondary" icon={Loader2} disabled>Checking the photos…</Btn>
+        : (
+          <div class="pair-row">
+            <Btn kind="secondary" icon={Camera} onClick={() => cam.current?.click()}>{t('take_photo')}</Btn>
+            <Btn kind="secondary" icon={Images} onClick={() => gallery.current?.click()}>{tOr('choose_photo', 'Choose from phone')}</Btn>
+          </div>
+        )}
     </section>
   )
 }

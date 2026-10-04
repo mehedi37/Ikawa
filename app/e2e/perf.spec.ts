@@ -13,7 +13,7 @@ test('perf at 4x CPU throttle + demo mode', async ({ page }) => {
   await expect(page.locator('.thumb')).toHaveCount(6)
   await expect(page.getByText('Guided demo.')).toBeVisible()
   // per-photo cost with a warm model
-  const input = page.locator('input[type=file]').first()
+  const input = page.locator('input[type=file][data-src=camera]').first()
   const t1 = Date.now()
   await input.setInputFiles(img('rust1'))
   await expect(page.locator('.thumb')).toHaveCount(7)

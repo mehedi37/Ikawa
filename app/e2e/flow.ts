@@ -32,7 +32,7 @@ export async function walk(page: Page, snap?: (name: string) => Promise<void>) {
   await s('05-voice-done')
   await btn('Next').click()
   await expect(page.getByRole('heading', { name: 'Leaf photos' })).toBeVisible()
-  const inputs = page.locator('input[type=file]')
+  const inputs = page.locator('input[type=file][data-src=camera]')
   for (const n of ['rust1', 'rust2', 'rust3']) await inputs.nth(0).setInputFiles(demo(n))
   for (const n of ['healthy1', 'healthy2', 'healthy3']) await inputs.nth(1).setInputFiles(demo(n))
   await expect(page.locator('.thumb')).toHaveCount(6, { timeout: 60_000 })
