@@ -25,7 +25,7 @@ Status: `Accepted` · `Provisional` (needs a check before submission) · `Supers
 | D-017 | 2026-10-03 | **Track hygiene:** follow only common sections + Annex B; label anything borrowed from other annexes | Accepted |
 | D-018 | 2026-10-03 | Business model: **free for farmers**; cooperatives/exporters and public programmes pay | Accepted |
 | D-019 | 2026-10-04 | Setting = **Kenya (Kirinyaga) + Kiswahili**; Gikuyu is the later "less-supported language" pack | **Accepted 2026-10-04** (user: use the language Noor speaks; add more languages later) |
-| D-020 | 2026-10-04 | **Solo builder → hard MVP cut line.** Must-have vs stretch is fixed in `docs/tasks.md` | Accepted |
+| D-020 | 2026-10-04 | **Solo builder → hard MVP cut line.** Must-have vs stretch is fixed in the (private) planning notes | Accepted |
 | D-021 | 2026-10-04 | BRACOL is a normal train/val/test source; **RoCoLe is the only external test**; per-source accuracy reported | Accepted |
 | D-022 | 2026-10-04 | **Kaggle-first pipeline**: data prep and training run as Kaggle kernels; atomic checkpoints + auto-resume; local scripts identical | Accepted |
 | D-023 | 2026-10-04 | **Duplicate-aware data**: group by byte hash + verified rotation/flip-invariant perceptual hash; split by group | Accepted |
@@ -118,7 +118,7 @@ Status: `Accepted` · `Provisional` (needs a check before submission) · `Supers
 - **Decision:** Free for farmers. Paid by cooperatives/exporters (registry + traceability + early warning) and public extension programmes / development projects (cost per farmer reached). See business-plan.md.
 
 ## D-019 — PROPOSED: Kenya (Kirinyaga) + Kiswahili instead of Rwanda + Kinyarwanda
-- **Trigger:** you have no native speaker and none of the 12 mentors lists any African language (`docs/mentors.md`).
+- **Trigger:** you have no native speaker and none of the 12 mentors lists any African language (private mentor notes).
 - **Why it is better:**
   1. **Data fits the place.** JMuBEN, our main training set, was photographed in Mutira, Kirinyaga county, Kenya (Arabica, real field conditions). In Kenya the training data is *from the user's own region*; in Rwanda it is not.
   2. **Reviewable language.** Kiswahili has far more speakers and far better tool support (Common Voice, MMS, FLEURS, NLLB), so finding a 30-minute native reviewer is realistic and machine drafts start from a decent baseline.
