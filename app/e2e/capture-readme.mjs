@@ -23,6 +23,10 @@ const shot = async (page, name, fullPage = false) => {
 }
 const btn = (page, name) => page.getByRole('button', { name })
 async function fresh() { const ctx = await browser.newContext(ctxOpts); const page = await ctx.newPage(); return { ctx, page } }
+async function start(page) {
+  await page.goto('./')
+  await expect(page.getByRole('heading', { name: 'See it work in two minutes' })).toBeVisible({ timeout: 30_000 })
+}
 async function unlock(page) {
   await page.goto('./#/home')
   await page.getByLabel('PIN').fill('4821')
@@ -45,22 +49,24 @@ async function afterConsent(page) {
 // 01-04, 08, 09: normal flow with real leaf photos
 if (['01', '02', '03', '04', '08', '09'].some(want)) {
   const { ctx, page } = await fresh()
+  await start(page)
+  await shot(page, 'start', true)   // the judges' first screen: guided demo panel + agent PIN
   await unlock(page)
-  await shot(page, '01-home')
+  await shot(page, 'home')
   await toPhotos(page)
-  await shot(page, '02-consent', true)
+  await shot(page, 'consent', true)
   await afterConsent(page)
   const inputs = page.locator('input[type=file][data-src=camera]')
   for (const n of ['rust1', 'rust2', 'rust3']) await inputs.nth(0).setInputFiles(demo(n))
   for (const n of ['healthy1', 'healthy2', 'healthy3']) await inputs.nth(1).setInputFiles(demo(n))
   await expect(page.locator('.thumb')).toHaveCount(6, { timeout: 90_000 })
-  await shot(page, '03-photos')
+  await shot(page, 'photos')
   await btn(page, 'Next').click()
   let gotQ = false
   for (let i = 1; i <= 6; i++) {
     await expect(page.getByText(`Question ${i} of 6`)).toBeVisible({ timeout: 20_000 })
     const txt = (await page.locator('main').innerText()).toLowerCase()
-    if (!gotQ && /antestia|bug|insect/.test(txt)) { await page.waitForLoadState('networkidle'); await shot(page, '04-question'); gotQ = true }
+    if (!gotQ && /antestia|bug|insect/.test(txt)) { await page.waitForLoadState('networkidle'); await shot(page, 'question'); gotQ = true }
     await btn(page, i % 2 ? /Yes$|Whole farm$/ : /No$|One area$/).click()
   }
   if (!gotQ) console.log('WARN: no antestia question found')
@@ -69,11 +75,11 @@ if (['01', '02', '03', '04', '08', '09'].some(want)) {
   await expect(page.getByRole('heading', { name: 'Send to a person' })).toBeVisible()
   await page.getByLabel('Officer phone number').fill('0788000000')
   const sms = (await page.locator('code').innerText()).trim()
-  await shot(page, '08-escalate-sms', true)
+  await shot(page, 'send-sms', true)
   await page.goto('./#/officer')
   await page.getByLabel('Case SMS').fill(sms)
   await expect(page.getByText('Farmer')).toBeVisible()
-  await shot(page, '09-officer', true)
+  await shot(page, 'officer', true)
   await ctx.close()
 }
 
@@ -87,10 +93,10 @@ if (want('05') || want('12')) {
   for (let i = 0; i < 6; i++) await btn(page, /No$|One area$/).click()
   await expect(page.getByText('Step 5 of 5')).toBeVisible({ timeout: 30_000 })
   await expect(page.getByText(/Heaviest day/)).toBeVisible({ timeout: 30_000 })
-  await shot(page, '05-result-rust', true)
+  await shot(page, 'result-leaf-rust', true)
   const area = page.locator('.facts', { hasText: /Heaviest day/ }).first()
   await area.evaluate((e) => e.scrollIntoView({ block: 'center' }))
-  await page.waitForTimeout(400); await page.screenshot({ path: `${OUT}/12-asof-rain.png` }); console.log('saved 12-asof-rain')
+  await page.waitForTimeout(400); await page.screenshot({ path: `${OUT}/rain-history.png` }); console.log('saved rain-history')
   await ctx.close()
 }
 
@@ -103,7 +109,7 @@ if (want('06')) {
   await btn(page, 'Next').click()
   for (let i = 0; i < 6; i++) await btn(page, /No$|One area$/).click()
   await expect(page.getByRole('heading', { name: 'I cannot read this leaf' })).toBeVisible({ timeout: 30_000 })
-  await shot(page, '06-cannot-read', true)
+  await shot(page, 'cannot-read', true)
   await ctx.close()
 }
 
@@ -124,7 +130,7 @@ if (want('07')) {
     await btn(page, 'Next').click()
     for (let i = 0; i < 6; i++) await btn(page, /Not sure/).click()
     await expect(page.getByRole('heading', { name: 'Your leaves look healthy' })).toBeVisible({ timeout: 30_000 })
-    await shot(page, '07-healthy', true)
+    await shot(page, 'leaves-healthy', true)
     // send to a person -> outbox, then coop
     await btn(page, 'Send to a person anyway').click()
     await expect(page.getByRole('heading', { name: 'Send to a person' })).toBeVisible()
@@ -135,7 +141,7 @@ if (want('07')) {
     await expect(page.getByText('Saved in outbox')).toBeVisible()
     await page.goto('./#/coop')
     await expect(page.getByText(/not synced/)).toBeVisible()
-    await shot(page, '10-coop-storage', true)
+    await shot(page, 'cooperative', true)
     await ctx.close()
   }
 }
@@ -148,11 +154,11 @@ if (want('11')) {
   await expect(page.getByRole('note')).toContainText('Machine-drafted')
   await btn(page, 'Anza').click()
   await page.waitForTimeout(500)
-  await shot(page, '11-kiswahili')
+  await shot(page, 'kiswahili')
   await ctx.close()
 }
 
 await browser.close()
 
-// Convert the PNGs to JPEG (<= 300 KB each) for the README:
+// Then convert the PNGs to JPEG (<= 300 KB each) for the README (the README links the .jpg names):
 //   uv run python -c "from PIL import Image; import glob,os; [ (Image.open(p).convert('RGB').save(p[:-4]+'.jpg','JPEG',quality=82,optimize=True,progressive=True), os.remove(p)) for p in glob.glob('docs/screenshots/*.png') ]"

@@ -16,9 +16,9 @@ Ikawa helps a smallholder coffee farmer with the question she actually has: *why
 > **Noor** is the persona from the hackathon brief: two hectares of coffee, a basic phone that stays at the house while she works the slope, her daughter's smartphone at weekends, and an extension officer who visits "twice a year at best". *Ikawa* means coffee in several East African languages.
 
 <p align="center">
-  <img src="docs/screenshots/05-result-rust.jpg" width="220" alt="Result: ranked causes, evidence used, one action card">
-  <img src="docs/screenshots/06-cannot-read.jpg" width="220" alt="Cannot read this leaf: sending to a person">
-  <img src="docs/screenshots/07-healthy.jpg" width="220" alt="Your leaves look healthy">
+  <img src="docs/screenshots/result-leaf-rust.jpg" width="220" alt="Result: ranked causes, evidence used, one action card">
+  <img src="docs/screenshots/cannot-read.jpg" width="220" alt="Cannot read this leaf: sending to a person">
+  <img src="docs/screenshots/leaves-healthy.jpg" width="220" alt="Your leaves look healthy">
 </p>
 
 ## Links
@@ -145,9 +145,9 @@ All screenshots were taken from the live site in a 390×844 phone viewport. Ther
 
 | | | |
 |:-:|:-:|:-:|
-| <img src="docs/screenshots/01-home.jpg" width="230" alt="Home"><br/>**Home**: area, language, demo runs | <img src="docs/screenshots/03-photos.jpg" width="230" alt="Photos"><br/>**Two bags**: worst row vs good row | <img src="docs/screenshots/04-question.jpg" width="230" alt="Question"><br/>**Picture questions**: voice or tap |
-| <img src="docs/screenshots/05-result-rust.jpg" width="230" alt="Result"><br/>**Result**: ranked causes and one action | <img src="docs/screenshots/06-cannot-read.jpg" width="230" alt="Cannot read"><br/>**"I cannot read this leaf"** | <img src="docs/screenshots/08-escalate-sms.jpg" width="230" alt="SMS"><br/>**One SMS** to the officer |
-| <img src="docs/screenshots/09-officer.jpg" width="230" alt="Officer"><br/>**Officer page**: decode, reply | <img src="docs/screenshots/11-kiswahili.jpg" width="230" alt="Kiswahili"><br/>**Kiswahili** with the machine-drafted badge | <img src="docs/screenshots/10-coop-storage.jpg" width="230" alt="Coop"><br/>**Coop page**: cases, storage |
+| <img src="docs/screenshots/start.jpg" width="230" alt="First screen with the guided demo"><br/>**First screen**: three guided demos, then the agent PIN | <img src="docs/screenshots/photos.jpg" width="230" alt="Photos"><br/>**Two bags**: take a photo or choose from the phone | <img src="docs/screenshots/question.jpg" width="230" alt="Question"><br/>**Picture questions**: voice or tap |
+| <img src="docs/screenshots/result-leaf-rust.jpg" width="230" alt="Result"><br/>**Result**: ranked causes and one action | <img src="docs/screenshots/cannot-read.jpg" width="230" alt="Cannot read"><br/>**"I cannot read this leaf"** | <img src="docs/screenshots/send-sms.jpg" width="230" alt="SMS"><br/>**One SMS** to the officer |
+| <img src="docs/screenshots/officer.jpg" width="230" alt="Officer"><br/>**Officer page**: decode, reply | <img src="docs/screenshots/kiswahili.jpg" width="230" alt="Kiswahili"><br/>**Kiswahili** with the machine-drafted badge | <img src="docs/screenshots/cooperative.jpg" width="230" alt="Coop"><br/>**Coop page**: cases, storage |
 
 ## 5. The AI, and where we chose not to use it
 
