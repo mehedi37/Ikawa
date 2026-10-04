@@ -1,7 +1,7 @@
 [project]
-name = "world-bank"
+name = "ikawa"
 version = "0.1.0"
-description = "Add your description here"
+description = "Ikawa: offline coffee-farm yield detective — data, training and geo pipelines"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
