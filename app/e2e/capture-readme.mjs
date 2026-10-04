@@ -88,7 +88,7 @@ if (want('05') || want('12')) {
   await expect(page.getByText('Step 5 of 5')).toBeVisible({ timeout: 30_000 })
   await expect(page.getByText(/Heaviest day/)).toBeVisible({ timeout: 30_000 })
   await shot(page, '05-result-rust', true)
-  const area = page.locator('.card', { hasText: /Heaviest day/ }).first()
+  const area = page.locator('.facts', { hasText: /Heaviest day/ }).first()
   await area.evaluate((e) => e.scrollIntoView({ block: 'center' }))
   await page.waitForTimeout(400); await page.screenshot({ path: `${OUT}/12-asof-rain.png` }); console.log('saved 12-asof-rain')
   await ctx.close()
@@ -153,3 +153,6 @@ if (want('11')) {
 }
 
 await browser.close()
+
+// Convert the PNGs to JPEG (<= 300 KB each) for the README:
+//   uv run python -c "from PIL import Image; import glob,os; [ (Image.open(p).convert('RGB').save(p[:-4]+'.jpg','JPEG',quality=82,optimize=True,progressive=True), os.remove(p)) for p in glob.glob('docs/screenshots/*.png') ]"

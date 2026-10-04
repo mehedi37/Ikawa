@@ -7,7 +7,7 @@ Ikawa helps a smallholder coffee farmer with the question she actually has: *why
 | | |
 |---|---|
 | **Live app** | [ikawa-meek-0s-projects.vercel.app](https://ikawa-meek-0s-projects.vercel.app). Works offline after the first visit and can be installed on Android. |
-| **Try it in 1 minute** | [Demo: leaf-rust case](https://ikawa-meek-0s-projects.vercel.app/?demo=1) · [Demo: "cannot read this leaf" case](https://ikawa-meek-0s-projects.vercel.app/?demo=1&run=mite) · [all links](#links) |
+| **Try it in 1 minute** | The first screen offers three guided demo cases (no PIN, nothing saved to real records): [leaf rust](https://ikawa-meek-0s-projects.vercel.app/?demo=1#/photos) · [a leaf it cannot read](https://ikawa-meek-0s-projects.vercel.app/?demo=1&run=mite#/photos) · [healthy leaves](https://ikawa-meek-0s-projects.vercel.app/?demo=1&run=healthy#/photos) · [all links](#links) |
 | **Code** | [github.com/mehedi37/Ikawa](https://github.com/mehedi37/Ikawa) |
 | **Setting** | Kirinyaga county, Kenya (Mutira ward, ≈ −0.47°, 37.23°) |
 | **Language** | Kiswahili, machine-drafted and not yet checked by a native speaker, with English fallback. Adding a language means adding a pack. |
@@ -27,9 +27,10 @@ Ikawa helps a smallholder coffee farmer with the question she actually has: *why
 
 | What | Link | What you will see |
 |---|---|---|
-| Live app | [ikawa-meek-0s-projects.vercel.app](https://ikawa-meek-0s-projects.vercel.app) | The PIN screen, then home. On the first visit, choose any PIN of 4 or more digits (it encrypts the data on that device). Later visits on the same device need the same PIN. |
+| Live app | [ikawa-meek-0s-projects.vercel.app](https://ikawa-meek-0s-projects.vercel.app) | The first screen offers three guided demo cases, then the agent PIN. The demos need no PIN and run in a separate throwaway store. For the real flow, choose any PIN of 4 or more digits on the first visit (it encrypts the data on that device); later visits on the same device need the same PIN. |
 | Demo: leaf-rust case | [`/?demo=1`](https://ikawa-meek-0s-projects.vercel.app/?demo=1) | A scripted case with real leaf photos that ends on a ranked result and one action card |
 | Demo: "cannot read" case | [`/?demo=1&run=mite`](https://ikawa-meek-0s-projects.vercel.app/?demo=1&run=mite) | Mite-damaged leaves, then "I cannot read this leaf", then the one-SMS escalation |
+| Demo: healthy leaves | [`/?demo=1&run=healthy`](https://ikawa-meek-0s-projects.vercel.app/?demo=1&run=healthy) | Healthy leaves in both bags; it looks past the leaves to the heavy April rains |
 | Officer page | [`/#/officer`](https://ikawa-meek-0s-projects.vercel.app/#/officer) | Paste a case SMS, read it decoded, reply with a card code |
 | Cooperative page | [`/#/coop`](https://ikawa-meek-0s-projects.vercel.app/#/coop) | Stored cases, storage used, export |
 | Health / version | [`/health.json`](https://ikawa-meek-0s-projects.vercel.app/health.json) | Commit, build time, model SHA-256, data versions |
