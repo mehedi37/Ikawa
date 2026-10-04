@@ -1,4 +1,7 @@
 import { render } from 'preact'
+// Atkinson Hyperlegible (Braille Institute, OFL): bundled so it works offline; Latin subset only (~40 KB).
+import '@fontsource/atkinson-hyperlegible/latin-400.css'
+import '@fontsource/atkinson-hyperlegible/latin-700.css'
 import './styles.css'
 import { App } from './app'
 

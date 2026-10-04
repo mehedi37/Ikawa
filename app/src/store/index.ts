@@ -13,9 +13,12 @@ export interface OutboxRecord { id: string; caseId: string; sms: string; created
 
 const CHECK = 'ikawa-pin-check'
 const DB = 'ikawa'
+/** The guided demo uses its own throwaway database, so it never touches real farmer records
+ *  and works whatever PIN the real store has. */
+export const DEMO_DB = 'ikawa-demo'
 
-async function db(): Promise<IDBPDatabase> {
-  return openDB(DB, 1, {
+async function db(name = DB): Promise<IDBPDatabase> {
+  return openDB(name, 1, {
     upgrade(d) {
       for (const n of ['farmers', 'cases', 'outbox']) d.createObjectStore(n, { keyPath: 'id' })
       d.createObjectStore('meta') // salt + PIN check value
@@ -29,8 +32,8 @@ export class Store {
   private constructor(d: IDBPDatabase, key: CryptoKey) { this.d = d; this.key = key }
 
   /** First call with a PIN sets it; later calls verify it. Throws 'bad-pin' on mismatch. */
-  static async unlock(pin: string): Promise<Store> {
-    const d = await db()
+  static async unlock(pin: string, name = DB): Promise<Store> {
+    const d = await db(name)
     let salt = (await d.get('meta', 'salt')) as Uint8Array<ArrayBuffer> | undefined
     const first = !salt
     if (!salt) { salt = newSalt(); await d.put('meta', salt, 'salt') }
@@ -43,8 +46,8 @@ export class Store {
     }
     return new Store(d, key)
   }
-  static async hasPin(): Promise<boolean> {
-    const d = await db(); const s = await d.get('meta', 'salt'); d.close(); return !!s
+  static async hasPin(name = DB): Promise<boolean> {
+    const d = await db(name); const s = await d.get('meta', 'salt'); d.close(); return !!s
   }
 
   close() { this.d.close() }

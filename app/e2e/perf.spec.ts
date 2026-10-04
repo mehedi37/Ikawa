@@ -11,7 +11,7 @@ test('perf at 4x CPU throttle + demo mode', async ({ page }) => {
   const tDemo = Date.now() - t0
   const nav = await page.evaluate(() => { const n = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming; return { dcl: Math.round(n.domContentLoadedEventEnd), load: Math.round(n.loadEventEnd) } })
   await expect(page.locator('.thumb')).toHaveCount(6)
-  await expect(page.getByText('DEMO SCENARIO')).toBeVisible()
+  await expect(page.getByText('Guided demo.')).toBeVisible()
   // per-photo cost with a warm model
   const input = page.locator('input[type=file]').first()
   const t1 = Date.now()
