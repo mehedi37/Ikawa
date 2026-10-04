@@ -6,7 +6,9 @@ Ikawa helps a smallholder coffee farmer answer the question she actually has, *"
 
 | | |
 |---|---|
-| **Live app** | **https://ikawa-meek-0s-projects.vercel.app** — demo: [`/?demo=1`](https://ikawa-meek-0s-projects.vercel.app/?demo=1) · "cannot read" demo: [`/?demo=1&run=mite`](https://ikawa-meek-0s-projects.vercel.app/?demo=1&run=mite) · officer page: [`/#/officer`](https://ikawa-meek-0s-projects.vercel.app/#/officer) · [`/health.json`](https://ikawa-meek-0s-projects.vercel.app/health.json) |
+| **Live app** | **[ikawa-meek-0s-projects.vercel.app](https://ikawa-meek-0s-projects.vercel.app)** — works offline after the first visit; installable on Android |
+| **Try it in 1 minute** | ▶ [Demo: leaf-rust case](https://ikawa-meek-0s-projects.vercel.app/?demo=1) · ▶ [Demo: "cannot read this leaf" case](https://ikawa-meek-0s-projects.vercel.app/?demo=1&run=mite) · see [all links](#links) |
+| **Code** | [github.com/mehedi37/Ikawa](https://github.com/mehedi37/Ikawa) |
 | **Videos** | Product demo: *link added after upload* · Technical walkthrough: *link added after upload* |
 | **Setting** | Kirinyaga county, Kenya (Mutira ward, ≈ −0.47°, 37.23°) |
 | **Language** | Kiswahili (**machine-drafted, not yet checked by a native speaker**) with English fallback; adding a language = adding a pack |
@@ -20,10 +22,69 @@ Ikawa helps a smallholder coffee farmer answer the question she actually has, *"
   <img src="docs/screenshots/07-healthy.jpg" width="220" alt="Your leaves look healthy">
 </p>
 
+## Links
+
+**The app** (open on a phone for the real experience; on a laptop it renders in a phone-width column)
+
+| What | Link | What you will see |
+|---|---|---|
+| Live app | [ikawa-meek-0s-projects.vercel.app](https://ikawa-meek-0s-projects.vercel.app) | PIN screen → home. On the first visit choose any PIN of 4+ digits (it encrypts the data on *that* device); later visits on the same device need the same PIN |
+| Demo: leaf-rust case | [`/?demo=1`](https://ikawa-meek-0s-projects.vercel.app/?demo=1) | A scripted case with real leaf photos, ending on a ranked result + one action card |
+| Demo: "cannot read" case | [`/?demo=1&run=mite`](https://ikawa-meek-0s-projects.vercel.app/?demo=1&run=mite) | Mite-damaged leaves → *"I cannot read this leaf"* → one-SMS escalation |
+| Officer page | [`/#/officer`](https://ikawa-meek-0s-projects.vercel.app/#/officer) | Paste a case SMS, read it decoded, reply with a card code |
+| Cooperative page | [`/#/coop`](https://ikawa-meek-0s-projects.vercel.app/#/coop) | Stored cases, storage used, export |
+| Health / version | [`/health.json`](https://ikawa-meek-0s-projects.vercel.app/health.json) | Commit, build time, model SHA-256, data versions |
+
+**Project**
+
+| What | Link |
+|---|---|
+| Source code | [github.com/mehedi37/Ikawa](https://github.com/mehedi37/Ikawa) |
+| Video 1 — product demo | *link added after upload* |
+| Video 2 — technical walkthrough | *link added after upload* |
+| Measured results (all runs) | [`docs/evidence/README.md`](docs/evidence/README.md) |
+| Decision log | [`docs/decisions.md`](docs/decisions.md) |
+| Verified problem facts | [`docs/problem-evidence.md`](docs/problem-evidence.md) |
+| Slides (PNG) | [`docs/slides/png/`](docs/slides/png/) |
+
+**Data and evidence sources**
+
+| Source | Link |
+|---|---|
+| JMuBEN (Arabica leaves, Kirinyaga, Kenya) | [Mendeley t2r6rszp5c](https://data.mendeley.com/datasets/t2r6rszp5c/1) |
+| JMuBEN2 (healthy + leaf miner) | [Mendeley tgv3zb82nd](https://data.mendeley.com/datasets/tgv3zb82nd/1) |
+| BRACOL (Arabica leaves, Brazil) | [Mendeley yy2k5y8mxg](https://data.mendeley.com/datasets/yy2k5y8mxg/1) |
+| RoCoLe (Robusta leaves, Ecuador) | [Mendeley c5yvn32dzg](https://data.mendeley.com/datasets/c5yvn32dzg/2) |
+| PlantVillage | [Kaggle](https://www.kaggle.com/datasets/abdallahalidev/plantvillage-dataset) |
+| Cassava Leaf Disease | [Kaggle competition](https://www.kaggle.com/c/cassava-leaf-disease-classification) |
+| CHIRPS daily rainfall | [UCSB Climate Hazards Center](https://www.chc.ucsb.edu/data/chirps) |
+| NASA POWER | [power.larc.nasa.gov](https://power.larc.nasa.gov/) |
+| iSDAsoil | [isda-africa.com/isdasoil](https://www.isda-africa.com/isdasoil/) |
+| WFP food prices, Kenya | [HDX](https://data.humdata.org/dataset/wfp-food-prices-for-kenya) |
+| FAOSTAT | [fao.org/faostat](https://www.fao.org/faostat) |
+| Kenya Agricultural Sector Extension Policy (2023) | [kilimo.go.ke (PDF)](https://kilimo.go.ke/wp-content/uploads/2024/10/KENYA-AGRICULTURAL-SECTOR-EXTENSION-POLICY-2023.pdf) |
+
+**Models and tools**
+
+| Tool | Link |
+|---|---|
+| Meta NLLB-200 (translation, used at build time) | [Hugging Face](https://huggingface.co/facebook/nllb-200-distilled-600M) |
+| Meta MMS-TTS Kiswahili (speech, used at build time) | [Hugging Face](https://huggingface.co/facebook/mms-tts-swh) |
+| ONNX Runtime Web (on-device inference) | [onnxruntime.ai](https://onnxruntime.ai/docs/tutorials/web/) |
+
+The Kaggle notebooks used for data preparation and training are private; the same scripts are in [`ml/`](ml/) and run unchanged on Kaggle or locally.
+
+**Event**
+
+| | |
+|---|---|
+| Hack-Nation | [hack-nation.ai](https://hack-nation.ai) |
+| World Bank Global AI & Digital Summit 2026 (Seoul) | [worldbank.org event page](https://www.worldbank.org/en/events/2026/10/19/global-ai-and-digital-summit-2026) |
+
 ---
 
 ## Contents
-1. [The problem](#1-the-problem) · 2. [Who it is for](#2-who-it-is-for) · 3. [How it works — the journey](#3-how-it-works--the-journey) · 4. [Screenshots](#4-screenshots) · 5. [The AI, and where we chose not to use it](#5-the-ai-and-where-we-chose-not-to-use-it) · 6. [Guardrails](#6-guardrails-and-responsible-ai) · 7. [Results](#7-results-measured) · 8. [Honest limits](#8-honest-limits) · 9. [Data](#9-data) · 10. [Languages](#10-languages-and-localisation) · 11. [How it meets the brief](#11-how-it-meets-the-brief) · 12. [Architecture](#12-architecture) · 13. [Run it](#13-run-it) · 14. [Deployment](#14-deployment-health-and-storage) · 15. [Business model](#15-business-model-why-it-can-last) · 16. [Roadmap](#16-status-and-roadmap) · 17. [Docs map](#17-documentation-map) · 18. [Credits](#18-credits-and-licences)
+[Links](#links) · 1. [The problem](#1-the-problem) · 2. [Who it is for](#2-who-it-is-for) · 3. [How it works — the journey](#3-how-it-works--the-journey) · 4. [Screenshots](#4-screenshots) · 5. [The AI, and where we chose not to use it](#5-the-ai-and-where-we-chose-not-to-use-it) · 6. [Guardrails](#6-guardrails-and-responsible-ai) · 7. [Results](#7-results-measured) · 8. [Honest limits](#8-honest-limits) · 9. [Data](#9-data) · 10. [Languages](#10-languages-and-localisation) · 11. [How it meets the brief](#11-how-it-meets-the-brief) · 12. [Architecture](#12-architecture) · 13. [Run it](#13-run-it) · 14. [Deployment](#14-deployment-health-and-storage) · 15. [Business model](#15-business-model-why-it-can-last) · 16. [Roadmap](#16-status-and-roadmap) · 17. [Docs map](#17-documentation-map) · 18. [Credits](#18-credits-and-licences)
 
 ---
 
