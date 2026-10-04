@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=1920,height=1080">
+<title>Why yield dropped</title><style>
+:root{--bg:#FAF7F2;--ink:#1C1712;--muted:#5A4F45;--accent:#8B2E1F;--soft:#F1E6DF;--line:#D9CFC6}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1920px;height:1080px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:"Noto Sans","Inter","Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:32px;line-height:1.4}
+.slide{position:relative;width:1920px;height:1080px;padding:84px 110px 70px;display:flex;flex-direction:column}
+.slide::before{content:"";position:absolute;left:0;top:0;bottom:0;width:18px;background:var(--accent)}
+.kicker{font-size:28px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+h1{font-size:84px;line-height:1.08;font-weight:800;letter-spacing:-.015em}
+h1 em{font-style:normal;color:var(--accent)}
+.src{font-size:27px;color:var(--muted);line-height:1.35}
+.foot{position:absolute;left:110px;right:110px;bottom:44px;font-size:24px;color:var(--muted)}
+</style></head>
+<body>
+<style>
+h1{font-size:80px;max-width:1650px}
+.not{color:var(--muted);text-decoration:line-through;text-decoration-thickness:5px;text-decoration-color:var(--accent)}
+.lead{font-size:34px;color:var(--muted);margin:70px 0 30px}
+.chips{display:flex;flex-wrap:wrap;gap:24px 24px;max-width:1700px}
+.chip{font-size:40px;font-weight:700;padding:18px 36px;border-radius:999px;border:3px solid var(--accent);color:var(--accent);background:#fff}
+.chip.hl{background:var(--accent);color:#fff}
+.chip.unk{border-style:dashed}
+.note{margin-top:44px;font-size:32px}
+.note b{color:var(--accent)}
+</style>
+<div class="slide">
+  <div class="kicker">The question</div>
+  <h1>Not <span class="not">"what is on this leaf?"</span><br>but <em>"why did my yield drop?"</em></h1>
+  <p class="lead">Ikawa ranks 9 possible causes:</p>
+  <div class="chips">
+    <span class="chip">leaf rust</span>
+    <span class="chip">other leaf disease</span>
+    <span class="chip">insect pest</span>
+    <span class="chip">heavy-rain damage</span>
+    <span class="chip">drought at flowering</span>
+    <span class="chip">soil acidity / nutrients</span>
+    <span class="chip">old trees</span>
+    <span class="chip hl">normal off-year</span>
+    <span class="chip unk">unknown</span>
+  </div>
+  <p class="note">Sometimes the honest answer is: <b>a normal off-year, don't buy anything.</b></p>
+</div></body></html>

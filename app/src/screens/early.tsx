@@ -3,6 +3,7 @@ import { Store } from '../store'
 import { go } from '../app'
 import { session, update, useSession, resetCase } from '../lib/session'
 import { recordMfcc } from '../lib/media'
+import { encodeTemplates } from '../lib/voicecodec'
 import { WORDS, type Mfcc, type VoiceTemplates, type Word } from '../adapters'
 import { Btn, Screen, AudioBtn } from './ui'
 import { t } from '../content/i18n'
@@ -113,6 +114,7 @@ export function Consent() {
         <div class="card" key={c.key}>
           <p class="big">{c.emoji}</p>
           <p>{t(c.clip)}</p>
+          {c.key === 'photos' && <p class="muted">{t('consent_photos_note')}</p>}
           <AudioBtn id={c.clip} />
           <div class="row">
             <button type="button" class={'btn ghost' + (s.consents[c.key] === true ? ' sel' : '')} onClick={() => set(c.key, true)}>👍 {t('yes')}</button>
@@ -149,7 +151,7 @@ export function VoiceSetup() {
   const save = async () => {
     update({ templates: clips as VoiceTemplates })
     const f = await session.store?.getFarmer(s.farmerId)
-    if (f) await session.store?.putFarmer({ ...f, voice: clips })
+    if (f) await session.store?.putFarmer({ ...f, voice: encodeTemplates(clips as VoiceTemplates) })
     go('photos')
   }
   return (

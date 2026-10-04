@@ -1,0 +1,15 @@
+{
+  "id": "mdmehedihasanmaruf/ikawa-train-lite0",
+  "title": "ikawa-train-lite0",
+  "code_file": "train.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": "true",
+  "enable_gpu": "true",
+  "enable_internet": "true",
+  "dataset_sources": [],
+  "competition_sources": [],
+  "kernel_sources": [
+    "mdmehedihasanmaruf/ikawa-data-prep"
+  ]
+}

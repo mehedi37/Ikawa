@@ -23,7 +23,8 @@ test('language switcher: persists, machine-drafted badge, Swahili audio plays, E
     page.waitForResponse((r) => /audio\/(sw\/)?C01\.opus/.test(r.url()) && r.request().method() === 'GET'),
     page.getByRole('button', { name: 'Sikiliza' }).first().click(),
   ])
-  expect(resp.status()).toBe(200)
+  // media elements often request a byte range: 206 Partial Content is a correct answer too
+  expect([200, 206]).toContain(resp.status())
   expect(resp.headers()['content-type']).toMatch(/audio|ogg|opus|octet/)
   await expect(page.getByText(/not available yet/)).toHaveCount(0)
   // switching back to English: no English clip exists, so the button says so instead of playing Swahili

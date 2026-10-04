@@ -25,3 +25,5 @@ dist-ssr
 .qa-public
 dist-qa
 test-results
+.vercel
+.env*

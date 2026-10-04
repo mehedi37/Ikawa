@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=1920,height=1080">
+<title>Evidence, three runs</title><style>
+:root{--bg:#FAF7F2;--ink:#1C1712;--muted:#5A4F45;--accent:#8B2E1F;--soft:#F1E6DF;--line:#D9CFC6}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1920px;height:1080px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:"Noto Sans","Inter","Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:32px;line-height:1.4}
+.slide{position:relative;width:1920px;height:1080px;padding:84px 110px 70px;display:flex;flex-direction:column}
+.slide::before{content:"";position:absolute;left:0;top:0;bottom:0;width:18px;background:var(--accent)}
+.kicker{font-size:28px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+h1{font-size:84px;line-height:1.08;font-weight:800;letter-spacing:-.015em}
+h1 em{font-style:normal;color:var(--accent)}
+.src{font-size:27px;color:var(--muted);line-height:1.35}
+.foot{position:absolute;left:110px;right:110px;bottom:44px;font-size:24px;color:var(--muted)}
+</style></head>
+<body>
+<style>
+.slide{padding-top:64px}
+h1{font-size:68px}
+table{width:100%;border-collapse:collapse;margin-top:34px;font-size:28px;line-height:1.3;background:#fff}
+th{background:var(--accent);color:#fff;text-align:left;font-weight:700;padding:16px 18px;font-size:27px;vertical-align:bottom}
+td{padding:18px 18px;border-bottom:2px solid var(--line);vertical-align:top}
+td.run{font-size:44px;font-weight:800;color:var(--accent);text-align:center;width:90px}
+td b{color:var(--accent)}
+tr.best td{background:var(--soft)}
+.data{margin-top:30px;font-size:36px;font-weight:700}
+.data b{color:var(--accent)}
+.src{margin-top:10px}
+</style>
+<div class="slide">
+  <div class="kicker">Evidence · what we measured, in order</div>
+  <h1>We tested honestly: <em>3 runs</em></h1>
+  <table>
+    <colgroup><col style="width:100px"><col style="width:520px"><col style="width:270px"><col style="width:430px"><col></colgroup>
+    <tr><th>Run</th><th>What changed</th><th>In-distribution test</th><th>Held-out field clusters (RoCoLe)</th><th>Unseen mites</th></tr>
+    <tr><td class="run">1</td><td>Baseline: RoCoLe held out entirely</td><td>98.96%</td><td><b>0.0%</b> (all 1,477 labelled <i>not_coffee</i>: background shortcut)</td><td>97% mean confidence, wrong</td></tr>
+    <tr><td class="run">2</td><td>RoCoLe split by whole field cluster (C1-7 train, C8 val, C9-12 held out) + low-res augmentation</td><td>98.44%</td><td><b>96.6%</b> (healthy 96.2%, rust 97.1%)</td><td>2.6% flagged; 95% mean confidence, wrong</td></tr>
+    <tr class="best"><td class="run">3</td><td>Mite photos taught as the "cannot read" class</td><td><b>98.51%</b> (int8 phone model: 98.67%)</td><td>89.2% overall; <b>96.6% when it answers</b>; declines 7.6%</td><td><b>50% flagged</b> (23/46)</td></tr>
+  </table>
+  <p class="data">JMuBEN: <b>58,550 files → 1,082 independent images</b> (98% copies)</p>
+  <p class="src">Source: docs/evidence/README.md. Nothing tuned on the held-out sets.</p>
+</div></body></html>

@@ -71,3 +71,18 @@ export function escalationCard(): Card {
   const all = allCards()
   return all.find((c) => c.cause === 'any' && !c.costsMoney) ?? all.find((c) => c.cause === 'unknown') ?? all[0]
 }
+
+/** Healthy-leaves state: one non-money card for the listed non-leaf causes, preferring the normal off-year
+ *  card that says "wait for a soil test", then soil-test advice. Never returns a money-costing card. */
+export function healthyCard(causes: CauseId[]): Card | undefined {
+  const free = allCards().filter((c) => !c.costsMoney)
+  const order = [...causes].sort((a, b) => rankHealthy(a) - rankHealthy(b))
+  for (const cause of order) {
+    const mine = free.filter((c) => c.cause === cause)
+    const soilIds = new Set((PACKS.en?.cards ?? []).filter((c) => /soil test|test your soil/i.test(c.text)).map((c) => c.id.toUpperCase()))
+    const soil = mine.find((c) => soilIds.has(c.id))
+    if (soil ?? mine[0]) return soil ?? mine[0]
+  }
+  return undefined
+}
+const rankHealthy = (c: CauseId) => (c === 'normal_off_year' ? 0 : c === 'soil_acidity_or_nutrient' ? 1 : 2)

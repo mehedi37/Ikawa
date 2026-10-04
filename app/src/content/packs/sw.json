@@ -340,7 +340,11 @@
   "ab.top_two_close": "Sababu mbili zinaonekana kuwa na uwezekano sawa.",
   "ab.answers_contradict": "Majibu yako na picha za majani hayakubaliani.",
   "ab.top_is_unknown": "Jibu linalowezekana zaidi ni jambo ambalo sijui.",
-  "ab.money_needs_high_conf": "Sina uhakika wa kutosha wa kukushauri utumie pesa."
+  "ab.money_needs_high_conf": "Sina uhakika wa kutosha wa kukushauri utumie pesa.",
+  "healthy_title": "Majani yako yanaonekana kuwa yenye afya",
+  "healthy_body": "Huenda sababu si ugonjwa wa majani. Huenda ikawa mvua, udongo, miti ya zamani, au majira ya kawaida. Siwezi kusema ambayo kutoka hapa.",
+  "send_anyway": "Kutuma kwa mtu hata hivyo",
+  "consent_photos_note": "(Haitumiwi bado: toleo hili halihifadhi picha.)"
  },
  "manualEdits": {
   "ids": [
@@ -396,6 +400,7 @@
   "asof_note",
   "cannot_read_body",
   "cannot_read_title",
+  "consent_photos_note",
   "ev.berryHoles_0",
   "ev.berryHoles_1",
   "ev.bugSeen_0",
@@ -425,12 +430,15 @@
   "ev.treeAgeOver20_1",
   "ev.wholeFarm_0",
   "ev.wholeFarm_1",
+  "healthy_body",
+  "healthy_title",
   "nc.leaf",
   "nc.no_plot_data",
   "nc.roots",
   "rain_asof",
   "rain_caption",
   "retake",
+  "send_anyway",
   "send_person",
   "use_demo_area",
   "use_my_location"

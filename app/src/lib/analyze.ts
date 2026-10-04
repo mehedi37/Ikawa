@@ -17,7 +17,7 @@ export function cannotRead(worst: Shot[]): boolean {
 
 /** The detective is only called with a usable bag. Otherwise we return a fixed 'cannot read' result
  *  (abstain, reason photo_unusable => SMS escalation bit 1) without calling rank(). */
-export function analyze(worst: Shot[], good: Shot[], answers: Answers, plot: PlotContext | null): { result: DetectiveResult; bag: number[]; contrast: number; cannotRead: boolean } {
+export function analyze(worst: Shot[], good: Shot[], answers: Answers, plot: PlotContext | null): { result: DetectiveResult; bag: number[]; contrast: number; cannotRead: boolean; healthy: boolean } {
   const w = worst.filter((s) => s.gate.ok && s.probs).map((s) => s.probs!)
   const g = good.filter((s) => s.gate.ok && s.probs).map((s) => s.probs!)
   const bag = w.length ? mean(w) : [0, 0, 0, 0, 0, 1]
@@ -27,12 +27,27 @@ export function analyze(worst: Shot[], good: Shot[], answers: Answers, plot: Plo
       causes: [{ id: 'unknown', p: 1 }, ...ids.map((id) => ({ id, p: 0 }))], top: 'unknown', abstain: true,
       abstainReasons: ['photo_unusable'], evidence: [], notChecked: ['leaf', 'roots', ...(plot ? [] : ['no_plot_data'])],
     }
-    return { result, bag, contrast: 0, cannotRead: true }
+    return { result, bag, contrast: 0, cannotRead: true, healthy: false }
   }
   const contrast = g.length ? Math.min(1, Math.max(0, disease(bag) - disease(mean(g)))) : 0
   const result = rank({ vision: { bagProbs: bag, contrast, usable: true }, answers, plot })
   if (!plot && !result.notChecked.includes('no_plot_data')) result.notChecked = [...result.notChecked, 'no_plot_data']
-  return { result, bag, contrast, cannotRead: false }
+  const healthy = result.abstain && leavesLookHealthy(bag, g.length >= MIN_LEAVES ? mean(g) : null, contrast)
+  return { result, bag, contrast, cannotRead: false, healthy }
+}
+
+/** UI-level "your leaves look healthy" state (the detective is untouched). Both bags must look healthy:
+ *  mean P(healthy) >= HEALTHY_MIN_P in the worst-row bag AND in the good-row bag, and the worst-vs-good
+ *  contrast (contracts.md section 11) must be at most HEALTHY_MAX_CONTRAST. */
+export const HEALTHY_MIN_P = 0.8
+export const HEALTHY_MAX_CONTRAST = 0.1
+export function leavesLookHealthy(worstBag: number[], goodBag: number[] | null, contrast: number): boolean {
+  return !!goodBag && worstBag[0] >= HEALTHY_MIN_P && goodBag[0] >= HEALTHY_MIN_P && contrast <= HEALTHY_MAX_CONTRAST
+}
+/** Causes a leaf photo can speak to; the healthy state lists only the others. */
+export const LEAF_CAUSES = ['leaf_rust', 'other_leaf_disease'] as const
+export function nonLeafCauses(r: DetectiveResult, n = 3): { id: DetectiveResult['top']; p: number }[] {
+  return r.causes.filter((c) => !(LEAF_CAUSES as readonly string[]).includes(c.id) && c.id !== 'unknown').slice(0, n)
 }
 
 export function escalationMask(r: DetectiveResult): number {

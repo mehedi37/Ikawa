@@ -1,6 +1,6 @@
-"""Build app/public/prices/prices.json from WFP Rwanda food prices (maize and beans only).
+"""Build app/public/prices/prices.json from WFP food prices (maize and beans only).
 
-Run:  uv run python geo/build_prices.py
+Run:  uv run python geo/build_prices.py [ken|rwa]     (default ken: Kenya, D-019)
 Per market+commodity: latest date, latest price, 12-month median (12 months before the
 latest date of that series), unit, currency. Retail preferred; Wholesale used only where a
 market has no Retail series for that commodity (pricetype recorded). No coffee in this dataset.
@@ -14,22 +14,37 @@ from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SRC = ROOT / "data" / "raw" / "prices" / "wfp_food_prices_rwa.csv"
+import sys
+COUNTRY = (sys.argv[1] if len(sys.argv) > 1 else "ken").lower()
+SRC = ROOT / "data" / "raw" / "prices" / f"wfp_food_prices_{COUNTRY}.csv"
+MARKETS = ROOT / "data" / "raw" / "prices" / f"wfp_markets_{COUNTRY}.csv"
 OUT = ROOT / "app" / "public" / "prices" / "prices.json"
-KEEP = {"Maize": "maize", "Beans": "beans"}
+STUDY_POINT = (-0.47, 37.23)  # Mutira ward, Kirinyaga (D-019)
+MAX_KM = 150                  # keep the file small: only markets a farmer could plausibly compare with
+
+
+def commodity_key(name: str) -> str | None:
+    """WFP names differ by country ('Maize (white)', 'Beans (rosecoco)'...). Grain only: no flour."""
+    n = name.lower()
+    if n.startswith("maize") and "flour" not in n:
+        return "maize"
+    if n.startswith("beans"):
+        return "beans"
+    return None
 
 
 def main():
     rows = [r for r in csv.DictReader(SRC.open(encoding="utf-8")) if not r["date"].startswith("#")]
     commodities = {r["commodity"] for r in rows}
     coffee = sorted(c for c in commodities if "coffee" in c.lower())
-    print("coffee commodities in WFP Rwanda:", coffee or "NONE (confirmed)")
+    print(f"coffee commodities in WFP {COUNTRY}:", coffee or "NONE (confirmed)")
     assert not coffee, "unexpected coffee rows; revisit D-008"
     series: dict = {}
     for r in rows:
-        if r["commodity"] not in KEEP or not r["price"]:
+        com = commodity_key(r["commodity"])
+        if com is None or not r["price"]:
             continue
-        key = (r["market"], KEEP[r["commodity"]], r["pricetype"], r["unit"], r["currency"])
+        key = (r["market"], com, r["pricetype"], r["unit"], r["currency"])
         series.setdefault(key, []).append((date.fromisoformat(r["date"]), float(r["price"]),
                                            r["admin1"], r["admin2"]))
     best: dict = {}
@@ -51,8 +66,30 @@ def main():
     dmax = max(r["latestDate"] for r in out_rows)
     for r in out_rows:  # series with no data in the 24 months before dmax are flagged, not dropped
         r["stale"] = r["latestDate"] < date(int(dmax[:4]) - 2, int(dmax[5:7]), 1).isoformat()
-    doc = {"source": "WFP food prices Rwanda (HDX), no coffee in dataset",
-           "dataThrough": dmax, "coffee": None, "rows": out_rows}
+    # nearest market to the study area (great-circle distance from the WFP market list)
+    import math
+    coords = {}
+    if MARKETS.exists():
+        for m in csv.DictReader(MARKETS.open(encoding="utf-8")):
+            try:
+                coords[m["market"]] = (float(m["latitude"]), float(m["longitude"]))
+            except (KeyError, ValueError):
+                pass
+    def km(a, b):
+        la1, lo1, la2, lo2 = map(math.radians, (*a, *b))
+        h = math.sin((la2 - la1) / 2) ** 2 + math.cos(la1) * math.cos(la2) * math.sin((lo2 - lo1) / 2) ** 2
+        return 6371 * 2 * math.asin(math.sqrt(h))
+    for r in out_rows:
+        r["distanceKm"] = round(km(STUDY_POINT, coords[r["market"]])) if r["market"] in coords else None
+    with_d = [r for r in out_rows if r["distanceKm"] is not None]
+    nearest = min(with_d, key=lambda r: r["distanceKm"])["market"] if with_d else None
+    doc = {"source": f"WFP food prices {COUNTRY.upper()} (HDX); no coffee in this dataset",
+           "country": COUNTRY, "dataThrough": dmax, "coffee": None,
+           "studyPoint": STUDY_POINT, "nearestMarket": nearest,
+           "note": "No WFP market inside Kirinyaga; the nearest market's series may be stale (see 'stale').",
+           "maxDistanceKm": MAX_KM,
+           "rows": sorted([r for r in out_rows if r["distanceKm"] is not None and r["distanceKm"] <= MAX_KM],
+                          key=lambda r: (r["distanceKm"], r["commodity"]))}
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(doc, separators=(",", ":")))
     print(f"{len(out_rows)} market-commodity rows, through {dmax}, {OUT.stat().st_size} bytes")

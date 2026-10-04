@@ -37,6 +37,7 @@ Status: `Accepted` · `Provisional` (needs a check before submission) · `Supers
 | D-029 | 2026-10-04 | **Language packs**: every farmer-facing string/audio is a swappable pack (`packs/<lang>.json` + `audio/`); machine-drafted packs are labelled | Accepted |
 | D-030 | 2026-10-04 | **Run 1 shortcut failure** (0% on field photos) → add field-photo coffee data by whole-cluster RoCoLe split + low-res augmentation | Accepted |
 | D-031 | 2026-10-04 | `not_coffee` means **"cannot read this leaf"** (not coffee, or a condition outside the five); unknown-pest photos are trained into it | Accepted |
+| D-032 | 2026-10-04 | EfficientNet-Lite0 vs MobileNetV2: **pre-registered** rule → **keep MobileNetV2** | Accepted (result 04:40) |
 
 ---
 
@@ -226,6 +227,12 @@ Status: `Accepted` · `Provisional` (needs a check before submission) · `Supers
 - **Not done, on purpose:** no threshold was tuned on the 46 held-out mite photos (that would contaminate the only test). A 7th `other_damage` class would be the principled next step (needs contract changes; post-hackathon).
 - **Phone model (run 3, int8, 2.42 MB, shipped in `app/public/model/`):** test 98.67% = 98.67% fp32 (99.5% identical predictions); field clusters 88.7% vs 89.2% fp32; recipe `all_ops_percentile`, 100 calibration images (300 need ~13 GB RAM).
 - **Evidence kept:** `docs/evidence/run1_zero_shot/` (0% on field photos), `run2_cluster_split/`, `run3_mites_as_unreadable/`.
+
+## D-032 — Architecture comparison, pre-registered (written 2026-10-04 ~04:00 Dhaka, BEFORE the run finished)
+- **Run:** Kaggle kernel `ikawa-train-lite0` = `ml/train.py` unchanged except `--arch efficientnet_lite0`; same data, splits, seed, epochs (25).
+- **Rule (fixed now):** switch the shipped model from MobileNetV2 to EfficientNet-Lite0 **only if** (1) validation macro-F1 is ≥ 0.5 points higher, **and** (2) its int8 export loses ≤ 2 points (export.py's own check), **and** (3) the int8 file is ≤ 4 MB. Otherwise keep MobileNetV2.
+- **The held-out sets (test, RoCoLe C9–12, unseen mites) are read only after the choice**, and reported for both models either way.
+- **Result (04:40):** validation macro-F1 MobileNetV2 0.9540 vs Lite0 0.9544 (**+0.04 points < +0.50 required → rule fails → keep MobileNetV2**). Held-out, read only after the decision: test 98.51% vs 98.81%; field clusters 89.2% vs 89.7%; **unseen mites flagged 50.0% vs 34.8%**. Lite0 is marginally better on known classes but worse on the safety-critical unknown-pest test, and 50% larger (3.6 MB int8). Evidence: `docs/evidence/run4_lite0_comparison/`.
 
 ---
 

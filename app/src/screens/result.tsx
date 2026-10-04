@@ -4,10 +4,10 @@ import { session, update, useSession } from '../lib/session'
 import { recordMfcc } from '../lib/media'
 import { loadPlot } from '../lib/plot'
 import { areaText } from './early'
-import { analyze, toCaseFile, escalationMask } from '../lib/analyze'
+import { analyze, toCaseFile, escalationMask, nonLeafCauses } from '../lib/analyze'
 import { classify, encodeCase, parseOfficerReply, type Answers, type AnswerCode } from '../adapters'
 import { QUESTIONS } from '../content/questions'
-import { cardForCause, getCard, escalationCard } from '../content/cards'
+import { cardForCause, getCard, escalationCard, healthyCard } from '../content/cards'
 import { isMachineDrafted, t, useLang } from '../content/i18n'
 import { AudioBtn, Bar, Btn, Screen, nice, evText, OptImg } from './ui'
 
@@ -59,11 +59,11 @@ export function Result() {
       const answers = { lastSeasonHeavy: 2, flowersDropped: 2, bugSeen: 2, berryHoles: 2, treeAgeOver20: 2, wholeFarm: 2, ...session.answers } as Answers
       const loaded = await loadPlot(session.area, session.asOf)
       const plot = loaded?.plot ?? null
-      const { result, bag, contrast, cannotRead } = analyze(session.worst, session.good, answers, plot)
+      const { result, bag, contrast, cannotRead, healthy } = analyze(session.worst, session.good, answers, plot)
       const cf = toCaseFile(session.farmerId, result, bag, contrast, answers, plot)
       const sms = encodeCase(cf)
       const caseId = `${session.farmerId}-${Date.now()}`
-      update({ result, plot, plotExtra: loaded?.extra ?? null, cannotRead, sms, caseId })
+      update({ result, plot, plotExtra: loaded?.extra ?? null, cannotRead, healthy, sms, caseId })
       await session.store?.putCase({ id: caseId, farmerId: session.farmerId, createdAt: Date.now(), sms,
         payload: { causes: result.causes, abstain: result.abstain, abstainReasons: result.abstainReasons, escalation: escalationMask(result),
           answers, plot, registryConsent: session.consents.registry, photoConsent: session.consents.photos } })
@@ -72,7 +72,7 @@ export function Result() {
   }, [])
   const r = s.result
   if (busy || !r) return <Screen title="Thinking…"><p class="big">🔍</p></Screen>
-  const retake = () => { update({ worst: [], result: null, sms: null, caseId: null }); go('photos') }
+  const retake = () => { update({ worst: [], result: null, healthy: false, sms: null, caseId: null }); go('photos') }
   if (s.cannotRead) {
     return (
       <Screen step="Step 5 of 5" title={t('cannot_read_title')}>
@@ -81,6 +81,28 @@ export function Result() {
         <Btn onClick={retake}>📷 {t('retake')}</Btn>
         <Btn kind="ghost" onClick={() => go('escalate')}>{t('send_person')}</Btn>
         <p class="muted">{areaText(s.area)}</p>
+      </Screen>
+    )
+  }
+  if (s.healthy) {
+    const top = nonLeafCauses(r)
+    const hc = healthyCard(top.map((c) => c.id))
+    return (
+      <Screen step="Step 5 of 5" title={t('healthy_title')}>
+        <div class="card ok healthy"><p class="big">🍃✅</p><p>{t('healthy_body')}</p></div>
+        {top.map((c) => <Bar key={c.id} label={nice(c.id)} p={c.p} />)}
+        {hc && !hc.costsMoney && (
+          <div class="card ok">
+            <p class="big">{hc.pictogram}</p><p>{hc.text}</p>
+            {hc.fallback && <small class="muted">Translation missing: English shown. </small>}
+            {(!hc.reviewed || isMachineDrafted()) && <small class="badge">{t('machine_drafted_notice')}</small>}
+            <div><AudioBtn id={hc.id} /></div>
+          </div>
+        )}
+        <div class="card"><b>{t('what_i_could_not_check')}</b><ul class="plain">{r.notChecked.map((e) => <li key={e}>{evText('nc', e)}</li>)}</ul></div>
+        <div class="card"><b>{t('area_title')}</b><p>{areaText(s.area)}</p></div>
+        <Btn kind="ghost" onClick={() => go('escalate')}>{t('send_anyway')}</Btn>
+        <Btn kind="ghost" onClick={() => go('home')}>Finish</Btn>
       </Screen>
     )
   }

@@ -46,13 +46,19 @@ export function Officer() {
 }
 
 type Row = CaseRecord & { synced: boolean }
+const mb = (b: number) => (b >= 1e9 ? `${(b / 1e9).toFixed(1)} GB` : `${(b / 1e6).toFixed(1)} MB`)
 
 export function Coop() {
   const [rows, setRows] = useState<Row[]>([])
   const [sel, setSel] = useState<Set<string>>(new Set())
   const [exported, setExported] = useState(false)
-  const load = async () => setRows(((await session.store?.listCases()) ?? []).sort((a, b) => b.createdAt - a.createdAt))
+  const [est, setEst] = useState<{ usage?: number; quota?: number } | null>(null)
+  const load = async () => {
+    setRows(((await session.store?.listCases()) ?? []).sort((a, b) => b.createdAt - a.createdAt))
+    try { setEst((await navigator.storage?.estimate?.()) ?? null) } catch { setEst(null) }
+  }
   useEffect(() => { void load() }, [])
+  const nSynced = rows.filter((r) => r.synced).length
   const chosen = rows.filter((r) => sel.has(r.id))
   // Respect registry consent: without it, farmer id and location are left out.
   const flat = (r: Row) => {
@@ -61,6 +67,7 @@ export function Coop() {
     return { case: r.id, farmer: reg ? r.farmerId : '', lat: reg ? p.plot?.lat ?? '' : '', lon: reg ? p.plot?.lon ?? '' : '',
       date: new Date(r.createdAt).toISOString(), top: p.causes?.[0]?.id ?? '', topP: p.causes?.[0]?.p ?? '', abstain: !!p.abstain, escalation: p.escalation ?? 0 }
   }
+  const delSynced = async () => { await session.store?.deleteSynced(); setSel(new Set()); await load() }
   const exportAs = async (kind: 'json' | 'csv') => {
     const data = chosen.map(flat)
     if (kind === 'json') await share('ikawa-cases.json', 'application/json', JSON.stringify(data, null, 2))
@@ -73,6 +80,13 @@ export function Coop() {
   }
   return (
     <Screen title="Cooperative cases">
+      <div class="card storage" aria-label="Storage on this phone">
+        <b>Storage on this phone</b>
+        <p>{rows.length} cases: {nSynced} synced, {rows.length - nSynced} not synced</p>
+        {est?.usage != null && <p>Used {mb(est.usage)} of {est.quota ? mb(est.quota) : '?'}</p>}
+        <p class="muted">Photos are not stored on this phone.</p>
+        <Btn kind="danger" disabled={!nSynced} onClick={delSynced}>Delete synced cases from this phone</Btn>
+      </div>
       {!rows.length && <p>No cases on this phone.</p>}
       {rows.map((r) => (
         <label class="card" key={r.id} style={{ display: 'block' }}>
@@ -84,7 +98,6 @@ export function Coop() {
       <div class="row"><Btn disabled={!chosen.length} onClick={() => exportAs('json')}>JSON</Btn><Btn disabled={!chosen.length} onClick={() => exportAs('csv')}>CSV</Btn></div>
       {exported && <div class="card">Did the cooperative receive the file? Only then mark synced.
         <Btn kind="ghost" onClick={async () => { await session.store?.markSynced(chosen.map((r) => r.id)); setExported(false); await load() }}>Yes, mark selected as synced</Btn></div>}
-      <Btn kind="danger" disabled={!rows.some((r) => r.synced)} onClick={async () => { await session.store?.deleteSynced(); setSel(new Set()); await load() }}>Delete synced cases from this phone</Btn>
       <Btn kind="ghost" onClick={() => go('home')}>Home</Btn>
     </Screen>
   )

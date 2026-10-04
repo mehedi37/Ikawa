@@ -342,6 +342,10 @@
   "ab.top_two_close": "Two causes look almost equally likely.",
   "ab.answers_contradict": "Your answers and the leaf photos do not agree.",
   "ab.top_is_unknown": "The most likely answer is something I do not know.",
-  "ab.money_needs_high_conf": "I am not sure enough to tell you to spend money."
+  "ab.money_needs_high_conf": "I am not sure enough to tell you to spend money.",
+  "healthy_title": "Your leaves look healthy",
+  "healthy_body": "The cause is probably not a leaf disease. It may be rain, soil, old trees, or a normal off-year. I cannot tell which from here.",
+  "send_anyway": "Send to a person anyway",
+  "consent_photos_note": "(Not used yet: this version keeps no photos.)"
  }
 }

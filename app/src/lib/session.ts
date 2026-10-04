@@ -19,6 +19,8 @@ export interface Session {
   asOf: string
   /** true when no leaf could be read: the detective was NOT called */
   cannotRead: boolean
+  /** true when both bags look healthy and the detective abstained (UI state, see analyze.ts) */
+  healthy: boolean
   result: DetectiveResult | null
   caseId: string | null
   sms: string | null
@@ -26,7 +28,7 @@ export interface Session {
 export const newFarmerId = () => 'F' + String(Math.floor(Math.random() * 10000)).padStart(4, '0')
 const fresh = (store: Store | null): Session => ({
   store, farmerId: newFarmerId(), consents: { service: null, registry: null, photos: null },
-  templates: null, worst: [], good: [], answers: {}, plot: null, plotExtra: null, area: null, asOf: '', cannotRead: false, result: null, caseId: null, sms: null,
+  templates: null, worst: [], good: [], answers: {}, plot: null, plotExtra: null, area: null, asOf: '', cannotRead: false, healthy: false, result: null, caseId: null, sms: null,
 })
 export const session: Session = fresh(null)
 const subs = new Set<() => void>()

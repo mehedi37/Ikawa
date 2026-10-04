@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=1920,height=1080">
+<title>Noor, Kirinyaga</title><style>
+:root{--bg:#FAF7F2;--ink:#1C1712;--muted:#5A4F45;--accent:#8B2E1F;--soft:#F1E6DF;--line:#D9CFC6}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1920px;height:1080px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:"Noto Sans","Inter","Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:32px;line-height:1.4}
+.slide{position:relative;width:1920px;height:1080px;padding:84px 110px 70px;display:flex;flex-direction:column}
+.slide::before{content:"";position:absolute;left:0;top:0;bottom:0;width:18px;background:var(--accent)}
+.kicker{font-size:28px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+h1{font-size:84px;line-height:1.08;font-weight:800;letter-spacing:-.015em}
+h1 em{font-style:normal;color:var(--accent)}
+.src{font-size:27px;color:var(--muted);line-height:1.35}
+.foot{position:absolute;left:110px;right:110px;bottom:44px;font-size:24px;color:var(--muted)}
+</style></head>
+<body>
+<style>
+.slide{padding-top:64px;padding-bottom:50px}
+.grid{display:grid;grid-template-columns:1fr 660px;gap:80px;margin-top:30px;flex:1;align-items:start}
+.fact + .fact{margin-top:22px}
+.sentence{font-size:36px;line-height:1.5;border-left:6px solid var(--accent);padding-left:36px}
+.sentence b{color:var(--accent)}
+.fact{background:#fff;border:2px solid var(--line);border-radius:18px;padding:28px 32px}
+.fact + .fact{margin-top:28px}
+.fact h3{font-size:30px;font-weight:800;margin-bottom:8px}
+.q{font-size:30px;line-height:1.4;margin:6px 0 12px}
+.q b{color:var(--accent)}
+</style>
+<div class="slide">
+  <div class="kicker">The problem</div>
+  <h1>Noor, <em>Kirinyaga</em></h1>
+  <div class="grid">
+    <p class="sentence">Because of Ikawa, a smallholder coffee farmer in Kirinyaga will <b>identify the most likely cause of her falling yield, and choose one action (or send the case to an extension officer) within the same week</b> she notices the problem, a decision she would otherwise make late or by guesswork; we know because Kenya's coffee yield was 435 kg/ha in 2023 against 592 kg/ha in 2000 (FAOSTAT), and Kenya's 2023 extension policy states that the extension-staff-to-farmer ratio "has not improved" and targets one officer per 600 farmers by 2029.</p>
+    <div>
+      <div class="fact">
+        <h3>Kenya coffee yield, kg/ha</h3>
+        <svg width="620" height="300" viewBox="0 0 620 300" role="img" aria-label="Kenya coffee yield 592, 262, 435 kg/ha"><rect x="50" y="50" width="120" height="200" rx="6" fill="#C9A79C"/><text x="110" y="36" text-anchor="middle" font-size="36" font-weight="800" fill="#1C1712">592</text><text x="110" y="290" text-anchor="middle" font-size="30" fill="#5A4F45">2000</text><rect x="250" y="161" width="120" height="89" rx="6" fill="#C9A79C"/><text x="310" y="147" text-anchor="middle" font-size="36" font-weight="800" fill="#1C1712">262</text><text x="310" y="290" text-anchor="middle" font-size="30" fill="#5A4F45">2010</text><rect x="450" y="103" width="120" height="147" rx="6" fill="#8B2E1F"/><text x="510" y="89" text-anchor="middle" font-size="36" font-weight="800" fill="#1C1712">435</text><text x="510" y="290" text-anchor="middle" font-size="30" fill="#5A4F45">2023</text><line x1="30" y1="250" x2="590" y2="250" stroke="#1C1712" stroke-width="3"/></svg>
+        <div class="src">FAOSTAT, Crops and livestock products, Kenya, "Coffee, green", Yield</div>
+      </div>
+      <div class="fact">
+        <h3>Extension staff per farmer</h3>
+        <p class="q">The ratio <b>"has not improved"</b>. Target: <b>1 officer : 600 farmers by 2029</b>.</p>
+        <div class="src">Kenya Agricultural Sector Extension Policy (KASEP), Dec 2023, p. 8</div>
+      </div>
+    </div>
+  </div>
+</div></body></html>

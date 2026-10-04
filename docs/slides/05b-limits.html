@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=1920,height=1080">
+<title>Data limits</title><style>
+:root{--bg:#FAF7F2;--ink:#1C1712;--muted:#5A4F45;--accent:#8B2E1F;--soft:#F1E6DF;--line:#D9CFC6}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1920px;height:1080px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:"Noto Sans","Inter","Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:32px;line-height:1.4}
+.slide{position:relative;width:1920px;height:1080px;padding:84px 110px 70px;display:flex;flex-direction:column}
+.slide::before{content:"";position:absolute;left:0;top:0;bottom:0;width:18px;background:var(--accent)}
+.kicker{font-size:28px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+h1{font-size:84px;line-height:1.08;font-weight:800;letter-spacing:-.015em}
+h1 em{font-style:normal;color:var(--accent)}
+.src{font-size:27px;color:var(--muted);line-height:1.35}
+.foot{position:absolute;left:110px;right:110px;bottom:44px;font-size:24px;color:var(--muted)}
+</style></head>
+<body>
+<style>
+.slide{padding-top:70px}
+h1{font-size:76px}
+ol{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:26px 50px;margin-top:46px}
+li{display:flex;gap:22px;font-size:32px;line-height:1.38;background:#fff;border:2px solid var(--line);border-radius:16px;padding:24px 28px}
+li .n{flex:0 0 50px;height:50px;border-radius:50%;background:var(--accent);color:#fff;font-weight:800;text-align:center;line-height:50px;font-size:28px}
+code{font-family:"DejaVu Sans Mono","Noto Sans Mono",Consolas,monospace;font-size:26px;background:var(--soft);padding:1px 8px;border-radius:6px}
+</style>
+<div class="slide">
+  <div class="kicker">Honest limits</div>
+  <h1>What our data does <em>NOT</em> cover</h1>
+  <ol>
+    <li><span class="n">1</span><span>No Kenyan <i>phone</i> photos in training; held-out field clusters share the camera and field with training (a within-dataset test, not a country shift).</span></li>
+    <li><span class="n">2</span><span>Only 5 leaf conditions + "cannot read"; roots, stems, berries, nutrient deficiency are invisible. Half of unseen mite photos are still read as rust.</span></li>
+    <li><span class="n">3</span><span>Healthy test set n = 35 (in-distribution), 46 unseen mite photos.</span></li>
+    <li><span class="n">4</span><span>CHIRPS rain is a ~5 km satellite estimate; it cannot see one slope.</span></li>
+    <li><span class="n">5</span><span>The detective's multipliers are expert guesses (<code>UNVERIFIED</code>); under ±20% changes, clear cases never flip, ambiguous ones flip 40–62% of the time. That is why it abstains.</span></li>
+    <li><span class="n">6</span><span>Kiswahili is machine-drafted (NLLB-200 + manual fixes), unreviewed; audio is MMS-TTS (non-commercial licence).</span></li>
+  </ol>
+</div></body></html>

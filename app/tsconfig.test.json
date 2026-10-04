@@ -1,0 +1,8 @@
+{
+  // Type-checks the unit tests too (they import fixtures from outside app/, e.g. ../detective/vignettes.json,
+  // so they are excluded from the production build, which only uploads app/).
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": { "noEmit": true, "composite": false, "tsBuildInfoFile": null },
+  "include": ["src"],
+  "exclude": []
+}

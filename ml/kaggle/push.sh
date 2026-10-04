@@ -8,7 +8,8 @@ K=.venv/bin/kaggle
 case "${1:-}" in
   data-prep) cp ml/prepare_data.py ml/kaggle/data-prep/prepare_data.py; $K kernels push -p ml/kaggle/data-prep ;;
   train)     cp ml/train.py ml/kaggle/train/train.py;                   $K kernels push -p ml/kaggle/train ;;
-  *) echo "usage: $0 data-prep|train"; exit 1 ;;
+  train-lite0) $K kernels push -p ml/kaggle/train-lite0 ;;   # train.py copy that defaults to --arch efficientnet_lite0
+  *) echo "usage: $0 data-prep|train|train-lite0"; exit 1 ;;
 esac
 echo "status : $K kernels status mdmehedihasanmaruf/ikawa-${1}"
 echo "output : $K kernels output mdmehedihasanmaruf/ikawa-${1} -p data/interim/kaggle_out/${1}"
