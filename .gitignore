@@ -26,3 +26,6 @@ checkpoints/
 
 # Private working files (video scripts, planning, the "Official Use Only" brief) — never published
 private/
+
+# Personal LinkedIn post draft
+linkedin-post.md

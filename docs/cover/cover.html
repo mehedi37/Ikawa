@@ -1,0 +1,43 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Ikawa cover</title>
+<style>
+:root{--canopy:#1e3a2b;--canopy-2:#2b5541;--mint:#8fcb9f;--paper:#f3f5f1;--cherry:#f2958f;--ochre:#fbf1d6;--ink:#18211b}
+*{box-sizing:border-box;margin:0}
+body{width:1200px;height:627px;overflow:hidden;font-family:"Atkinson Hyperlegible","Inter","Segoe UI",system-ui,sans-serif;color:#fff;
+ background:radial-gradient(900px 500px at 85% 40%,#2f5d46 0%,transparent 70%),linear-gradient(135deg,#14251b 0%,#1e3a2b 60%,#234634 100%);position:relative}
+.rings{position:absolute;right:-120px;top:-140px;width:760px;height:760px;border-radius:50%;border:2px solid rgba(143,203,159,.18);box-shadow:0 0 0 60px rgba(143,203,159,.05),0 0 0 120px rgba(143,203,159,.035)}
+.left{position:absolute;left:64px;top:52px;width:620px}
+.tag{display:inline-block;font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:var(--mint);border:1.5px solid rgba(143,203,159,.5);padding:7px 14px;border-radius:999px}
+h1{font-size:62px;line-height:1.04;margin-top:22px;letter-spacing:-.02em}
+h1 span{color:var(--mint)}
+.sub{font-size:26px;line-height:1.3;margin-top:18px;color:#e8efe9;max-width:560px}
+.chips{display:flex;gap:10px;margin-top:26px;flex-wrap:wrap}
+.chip{font-size:18px;padding:9px 16px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22)}
+.chip b{color:var(--mint)}
+.foot{position:absolute;left:64px;bottom:30px;font-size:16px;color:#afbdb3;letter-spacing:.02em}
+.phone{position:absolute;width:236px;height:440px;border-radius:30px;background:#0b130e;padding:9px;box-shadow:0 30px 60px rgba(0,0,0,.45),0 0 0 1.5px rgba(255,255,255,.14)}
+.screen{width:100%;height:100%;border-radius:22px;overflow:hidden;background:var(--paper)}
+.screen img{width:100%;display:block}
+.p1{left:716px;top:48px;transform:rotate(-4deg)}
+.p2{left:950px;top:128px;transform:rotate(3deg)}
+.badge{position:absolute;white-space:nowrap;font-size:16px;font-weight:700;padding:8px 14px;border-radius:12px;box-shadow:0 10px 24px rgba(0,0,0,.35)}
+.b1{left:700px;top:510px;background:var(--ochre);color:#5e4708}
+.b2{left:960px;top:34px;background:#fff;color:#1e3a2b}
+</style></head><body>
+<div class="rings"></div>
+<div class="left">
+  <span class="tag">Hack-Nation × World Bank · Small AI</span>
+  <h1>Ikawa<br><span>coffee advice with no signal</span></h1>
+  <p class="sub">An offline yield detective for a smallholder farmer, on a low-end Android phone.</p>
+  <div class="chips">
+    <span class="chip"><b>2.4 MB</b> leaf model</span>
+    <span class="chip"><b>0 MB</b> voice model</span>
+    <span class="chip"><b>1 SMS</b> to an officer</span>
+  </div>
+</div>
+<div class="phone p1"><div class="screen"><img src="../screenshots/result-leaf-rust.jpg"></div></div>
+<div class="phone p2"><div class="screen"><img src="../screenshots/question.jpg"></div></div>
+<div class="badge b2">Speaks Kiswahili out loud</div>
+<div class="badge b1">Works in airplane mode</div>
+<div class="foot">Answers by voice or tap · Works offline · A person makes the final call</div>
+</body></html>

@@ -1,5 +1,9 @@
 # Ikawa: an offline coffee-farm "yield detective"
 
+<p align="center">
+  <img src="docs/cover/linkedin-cover.png" alt="Ikawa: coffee advice with no signal. An offline yield detective on a low-end Android phone">
+</p>
+
 Small AI for Development Hackathon · Agriculture track · Hack-Nation × World Bank Youth Summit, 3-4 October 2026
 
 Ikawa helps a smallholder coffee farmer with the question she actually has: *why did my yield drop, and what should I do this week?* Most crop tools only answer "what disease is on this leaf?". Ikawa takes a few leaf photos, the rain and soil data for her area, and her answers to six simple questions. It ranks the likely causes and plays one action card as audio in her language. When the evidence is thin, it says "I cannot read this" or "I'm not sure, a person will help" and packs the case into a single SMS for the extension officer. It runs fully offline on a low-end Android phone, and **a person always makes the final call.**
